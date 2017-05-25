@@ -1,6 +1,6 @@
 # vim-monokai
 
-Refined monokai color scheme for vim. It's derived from the work put into:
+Refined monokai color scheme for `vim`. It's derived from the work put into:
 
 * [sickill/vim-monokai](https://github.com/sickill/vim-monokai).
 * [crusoexia/vim-monokai](https://github.com/crusoexia/vim-monokai).
@@ -13,7 +13,9 @@ Note that, in my case, I use several plugins to enhance my own highlighting and 
 
 * [vim-plug](https://github.com/junegunn/vim-plug)
 
+```viml
     Plug 'ErichDonGubler/vim-sublime-monokai'
+```
 
 ### Manual installation
 
@@ -21,7 +23,7 @@ Download the [colors/monokai.vim](https://raw.githubusercontent.com/erichdongubl
 
 ## Usage
 
-Copy below command to your `~/.vimrc`:
+Copy the following commands to your `~/.vimrc`:
 
 ```viml
 syntax on
@@ -31,13 +33,12 @@ set t_Co=256  " vim-sublime-monokai now only support 256 colours in terminal.
 
 ## Configuration
 
-### Italic
+### Italics
 
-By default the GUI enables italic, but terminal does not. If you are using a font support italic, paste the following command in `.vimrc` to turn italics in terminal:
+By default italicized text is enabled in GUI (gVim), but in terminal it's not. If you are using a font that support italics in terminal, paste the following command in `.vimrc`:
 
 ```viml
-    let g:monokai_term_italic = 1
-    let g:monokai_gui_italic = 1
+let g:monokai_term_italic = 1
 ```
 
 ## Language-specific configuration
@@ -46,11 +47,8 @@ In order to provide an experience with parity to Sublime, this color scheme inte
 
 ### Javascript
 
-1. [vim-javascript](https://github.com/pangloss/vim-javascript), which provide features such as param syntax highlight,
-function assignment identifier highlight ( just as the screenshots ).
-
-2. [vim-javascript-lib](https://github.com/crusoexia/vim-javascript-lib), which is the companion of _vim-javascript_,
-provide the popular javascript libraries key word highlight, such as [underscore](http://underscorejs.org/) and
+1. [vim-javascript](https://github.com/pangloss/vim-javascript) for the core language
+2. [vim-javascript-lib](https://github.com/crusoexia/vim-javascript-lib), for popular Javascript librarie, like [underscore](http://underscorejs.org/) and
 [Backbone](http://backbonejs.org/).
 
 ## Screenshots
