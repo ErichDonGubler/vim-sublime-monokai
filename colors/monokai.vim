@@ -95,7 +95,7 @@ let s:delbg       = { "gui": "#f75f5f", "cterm": "167" }
 let s:changefg    = { "gui": "#d7d7ff", "cterm": "189" }
 let s:changebg    = { "gui": "#5f5f87", "cterm": "60" }
 
-" Highlighting 
+" Highlighting
 " ------------
 
 " editor
@@ -124,6 +124,9 @@ call s:h("SignColumn",    {                     "bg": s:lightblack })
 call s:h("SpecialKey",    { "fg": s:lightblack2 })
 call s:h("Title",         { "fg": s:yellow })
 call s:h("Directory",     { "fg": s:aqua })
+
+" match NoHighLight /\s\+/
+" call s:h("NoHighLight",   { "fg": s:lightblack, "bg": s:lightblack2 })
 
 " diff
 call s:h("DiffAdd",       { "fg": s:addfg,      "bg": s:addbg })
@@ -185,7 +188,7 @@ call s:h("Tag",           { "fg": s:pink })
 
 call s:h("Todo",          { "fg": s:orange,   "format": "bold,italic" })
 call s:h("Comment",       { "fg": s:warmgrey, "format": "italic" })
-                         
+
 call s:h("Underlined",    { "fg": s:green })
 call s:h("Ignore",        {})
 call s:h("Error",         { "fg": s:red, "bg": s:darkred })
@@ -220,21 +223,42 @@ call s:h("jpropertiesIdentifier",   { "fg": s:pink })
 call s:h("vimCommand",              { "fg": s:pink })
 
 " Javascript
-call s:h("jsFuncName",          { "fg": s:green })
-call s:h("jsThis",              { "fg": s:pink })
-call s:h("jsFunctionKey",       { "fg": s:green })
-call s:h("jsPrototype",         { "fg": s:aqua })
-call s:h("jsExceptions",        { "fg": s:aqua })
-call s:h("jsFutureKeys",        { "fg": s:aqua })
-call s:h("jsBuiltins",          { "fg": s:aqua })
 call s:h("jsArgsObj",           { "fg": s:aqua })
-call s:h("jsStatic",            { "fg": s:aqua })
-call s:h("jsSuper",             { "fg": s:aqua })
-call s:h("jsFuncArgRest",       { "fg": s:purple, "format": "italic" })                                 
-call s:h("jsFuncArgs",          { "fg": s:orange, "format": "italic" })
-call s:h("jsStorageClass",      { "fg": s:aqua })
+call s:h("jsArrowFunction",     { "fg": s:pink })
+call s:h("jsBuiltins",          { "fg": s:aqua })
+call s:h("jsCatch",             { "fg": s:pink })
+call s:h("jsConditional",       { "fg": s:pink })
 call s:h("jsDocTags",           { "fg": s:aqua,   "format": "italic" })
-                                 
+call s:h("jsExceptions",        { "fg": s:aqua,   "format": "italic" })
+call s:h("jsExport",            { "fg": s:pink })
+call s:h("jsFinally",           { "fg": s:pink })
+call s:h("jsFrom",              { "fg": s:pink })
+call s:h("jsFuncArgRest",       { "fg": s:purple, "format": "italic" })
+call s:h("jsFuncArgs",          { "fg": s:orange, "format": "italic" })
+call s:h("jsFuncCall",          { "fg": s:aqua,   "format": "italic" })
+call s:h("jsFuncName",          { "fg": s:green })
+call s:h("jsFunctionKey",       { "fg": s:green })
+call s:h("jsFutureKeys",        { "fg": s:pink }) " FIXME: FutureKeys includes a bit too much. It had some type names, which should be aqua, but most of the keywords that might actually get used would be pink (keywords like public, abstract).
+call s:h("jsGlobalObjects",     { "fg": s:aqua,   "format": "italic" })
+call s:h("jsImport",            { "fg": s:pink })
+call s:h("jsModuleAs",          { "fg": s:pink })
+call s:h("jsModuleAsterisk",    { "fg": s:pink })
+call s:h("jsNan",               { "fg": s:purple })
+call s:h("jsNull",              { "fg": s:purple })
+call s:h("jsObjectFuncName",    { "fg": s:green })
+call s:h("jsPrototype",         { "fg": s:aqua })
+call s:h("jsRegexpCharClass",   { "fg": s:purple })
+call s:h("jsRegexpBackRef",     { "fg": s:pink })
+call s:h("jsRegexpMod",         { "fg": s:pink }) " Technically this is extra from Sublime, but it looks nice.
+call s:h("jsRegexpOr",          { "fg": s:pink })
+call s:h("jsReturn",            { "fg": s:pink })
+call s:h("jsStatic",            { "fg": s:aqua })
+call s:h("jsStorageClass",      { "fg": s:aqua })
+call s:h("jsSuper",             { "fg": s:orange, "format": "italic" })
+call s:h("jsThis",              { "fg": s:orange, "format": "italic" })
+call s:h("jsTry",               { "fg": s:pink })
+call s:h("jsUndefined",         { "fg": s:purple })
+
 " Html
 call s:h("htmlTag",             { "fg": s:white })
 call s:h("htmlEndTag",          { "fg": s:white })
@@ -298,5 +322,6 @@ call s:h("erubyRailsMethod",            { "fg": s:aqua })
 call s:h("cLabel",                      { "fg": s:pink })
 call s:h("cStructure",                  { "fg": s:pink })
 call s:h("cStorageClass",               { "fg": s:pink })
-call s:h("cInclude",                    { "fg": s:green })
+call s:h("cInclude",                    { "fg": s:pink })
 call s:h("cDefine",                     { "fg": s:green })
+

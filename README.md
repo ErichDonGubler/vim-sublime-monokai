@@ -1,59 +1,61 @@
-vim-monokai
-===========
+# vim-monokai
 
-Refined monokai color scheme for vim. 
+Refined monokai color scheme for vim. It's derived from the work put into:
 
-* The colour palette from [sickill/vim-monokai](https://github.com/sickill/vim-monokai). 
+* [sickill/vim-monokai](https://github.com/sickill/vim-monokai).
+* [crusoexia/vim-monokai](https://github.com/crusoexia/vim-monokai).
 
-Install
--------
+I noticed that there were several places where the highlighting wasn't entirely faithful to that of Sublime, which is my second choice for editing in my day-to-day. The purpose of this project is to provide an experience that matches Sublime as closely as possible.
 
-### [vim-plug](https://github.com/junegunn/vim-plug) (recommend)
+Note that, in my case, I use several plugins to enhance my own highlighting and ctags experience. Where possible, the dependent plugins have been noted for languages whose highlighting would otherwise be impossible to make equivalent to Sublime.
 
-    Plug 'crusoexia/vim-monokai'
+## Installation
 
-### Manually
+* [vim-plug](https://github.com/junegunn/vim-plug)
 
-Download the [colors/monokai.vim](https://raw.githubusercontent.com/crusoexia/vim-monokai/master/colors/monokai.vim) file, move it into your __~/.vim/syntax/__ folder.
+    Plug 'ErichDonGubler/vim-sublime-monokai'
 
-Usage
------
+### Manual installation
+
+Download the [colors/monokai.vim](https://raw.githubusercontent.com/erichdongubler/vim-sublime-monokai/master/colors/monokai.vim) file, move it into your `~/.vim/syntax/` folder.
+
+## Usage
 
 Copy below command to your `~/.vimrc`:
 
-```VimL
+```viml
 syntax on
 colorscheme monokai
-set t_Co=256  " vim-monokai now only support 256 colours in terminal.
+set t_Co=256  " vim-sublime-monokai now only support 256 colours in terminal.
 ```
 
-Configuration
--------------
+## Configuration
 
 ### Italic
 
-By default the gui enables italic but terminal. They both can be configured.
-    
-If you are using a font support italic, paste below command in `.vimrc` to turn on terminal italic:
+By default the GUI enables italic, but terminal does not. If you are using a font support italic, paste the following command in `.vimrc` to turn italics in terminal:
 
+```viml
     let g:monokai_term_italic = 1
     let g:monokai_gui_italic = 1
+```
 
-Javascript
-----------
+## Language-specific configuration
 
-For javascript development, it is recommend to install below plugins:
+In order to provide an experience with parity to Sublime, this color scheme integrates with the highlighting groups that several language-specific plugins specify. You will need to install these plugins in order to have Sublime-like highlighting.
 
-1. [vim-javascript](https://github.com/pangloss/vim-javascript), which provide features such as param syntax highlight, 
+### Javascript
+
+1. [vim-javascript](https://github.com/pangloss/vim-javascript), which provide features such as param syntax highlight,
 function assignment identifier highlight ( just as the screenshots ).
 
-2. [vim-javascript-lib](https://github.com/crusoexia/vim-javascript-lib), which is the companion of _vim-javascript_, 
-provide the popular javascript libraries key word highlight, such as [underscore](http://underscorejs.org/) and 
+2. [vim-javascript-lib](https://github.com/crusoexia/vim-javascript-lib), which is the companion of _vim-javascript_,
+provide the popular javascript libraries key word highlight, such as [underscore](http://underscorejs.org/) and
 [Backbone](http://backbonejs.org/).
 
-Screenshots
------------
+## Screenshots
 
 ![javascript](screenshots/javascript.png)
 
 ![html](screenshots/html.png)
+
