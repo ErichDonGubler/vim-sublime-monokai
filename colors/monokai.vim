@@ -217,6 +217,14 @@ call s:h("SyntasticWarningSign",    { "fg": s:lightblack, "bg": s:orange })
 " ------------------
 
 " Java properties
+call s:h("javaCommentTitle", { "fg": s:grey })
+call s:h("javaConditional", { "fg": s:pink })
+call s:h("javaDocParam", { "fg": s:grey })
+call s:h("javaDocTags", { "fg": s:pink })
+call s:h("javaExceptions", { "fg": s:pink })
+call s:h("javaRepeat", { "fg": s:pink })
+call s:h("javaSpecialChar", { "fg": s:purple })
+call s:h("javaStatement", { "fg": s:pink })
 call s:h("jpropertiesIdentifier",   { "fg": s:pink })
 
 " Vim command
