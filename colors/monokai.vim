@@ -363,6 +363,9 @@ call s:h("cDefine",                     { "fg": s:green })
 call s:h("cppSTLfunction", { "fg": s:aqua })
 call s:h("cppSTLios", { "fg": s:aqua })
 
+" D
+call s:h("dExternal", { "fg": s:pink })
+
 " Makefile
 call s:h("makeCommands",    { "fg": s:white })
 call s:h("makeCmdNextLine", { "fg": s:white })
