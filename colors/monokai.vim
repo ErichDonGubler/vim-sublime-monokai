@@ -221,6 +221,19 @@ call s:h("jpropertiesIdentifier",   { "fg": s:pink })
 
 " Vim command
 call s:h("vimCommand",              { "fg": s:pink })
+call s:h("vimEnvvar",               { "fg": s:aqua })
+call s:h("vimIsCommand",            { "fg": s:aqua })
+call s:h("vimUserFunc",             { "fg": s:aqua })
+call s:h("vimFuncName",             { "fg": s:aqua })
+call s:h("vimFuncNameTag",          { "fg": s:aqua })
+call s:h("vimFuncVar",              { "fg": s:orange, "format": "italic" })
+call s:h("vimMapModKey",            { "fg": s:aqua })
+call s:h("vimMapRhs",               { "fg": s:yellow })
+call s:h("vimNotation",             { "fg": s:aqua })
+call s:h("vimOperParen",            { "fg": s:orange, "format": "italic" })
+call s:h("vimOption",               { "fg": s:aqua })
+call s:h("vimSet",                  { "fg": s:pink })
+call s:h("vimSetEqual",             { "fg": s:pink })
 
 " Javascript
 call s:h("jsArgsObj",           { "fg": s:aqua })
