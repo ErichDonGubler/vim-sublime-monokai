@@ -351,3 +351,7 @@ call s:h("cStorageClass",               { "fg": s:pink })
 call s:h("cInclude",                    { "fg": s:pink })
 call s:h("cDefine",                     { "fg": s:green })
 
+" Makefile
+call s:h("makeCommands",    { "fg": s:white })
+call s:h("makeCmdNextLine", { "fg": s:white })
+
