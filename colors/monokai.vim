@@ -355,3 +355,11 @@ call s:h("cDefine",                     { "fg": s:green })
 call s:h("makeCommands",    { "fg": s:white })
 call s:h("makeCmdNextLine", { "fg": s:white })
 
+" Bash
+call s:h("shConditional",               { "fg": s:pink })
+call s:h("shDerefOff",                  { "fg": s:white })
+call s:h("shDerefSimple",               { "fg": s:aqua })
+call s:h("shDerefVar",                  { "fg": s:aqua })
+call s:h("shFunctionKey",               { "fg": s:pink })
+call s:h("shLoop",                      { "fg": s:pink })
+
