@@ -273,20 +273,33 @@ call s:h("xmlTagName",          { "fg": s:orange })
 call s:h("xmlAttrib",           { "fg": s:green })
 
 " CSS
-call s:h("cssProp",             { "fg": s:yellow })
-call s:h("cssUIAttr",           { "fg": s:yellow })
-call s:h("cssFunctionName",     { "fg": s:aqua })
-call s:h("cssColor",            { "fg": s:purple })
-call s:h("cssPseudoClassId",    { "fg": s:purple })
+call s:h("cssAttributeSelector",{ "fg": s:white })
+call s:h("cssBorderAttr",       { "fg": s:aqua })
+call s:h("cssBraces",           { "fg": s:white })
 call s:h("cssClassName",        { "fg": s:green })
-call s:h("cssValueLength",      { "fg": s:purple })
-call s:h("cssCommonAttr",       { "fg": s:pink })
-call s:h("cssBraces" ,          { "fg": s:white })
 call s:h("cssClassNameDot",     { "fg": s:pink })
+call s:h("cssColor",            { "fg": s:purple })
+call s:h("cssCommonAttr",       { "fg": s:pink })
+call s:h("cssFunctionName",     { "fg": s:aqua })
+call s:h("cssProp",             { "fg": s:aqua, "format": "italic" })
+call s:h("cssPseudoClassId",    { "fg": s:pink })
+call s:h("cssSelectorOp2",      { "fg": s:pink })
+call s:h("cssTagName",          { "fg": s:pink })
+call s:h("cssUnitDecorators",   { "fg": s:pink })
+call s:h("cssUIAttr",           { "fg": s:aqua })
 call s:h("cssURL",              { "fg": s:orange, "format": "underline,italic" })
+call s:h("cssValueLength",      { "fg": s:purple })
 
 " LESS
 call s:h("lessVariable",        { "fg": s:green })
+
+" SASS
+call s:h("sassAmpersand",       { "fg": s:pink })
+call s:h("sassClass",           { "fg": s:green })
+call s:h("sassCssAttribute",    { "fg": s:aqua })
+call s:h("sassMixinName",       { "fg": s:aqua })
+call s:h("sassMixing",          { "fg": s:pink })
+call s:h("sassVariable",        { "fg": s:white })
 
 " ruby
 call s:h("rubyInterpolationDelimiter",  {})
