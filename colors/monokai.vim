@@ -173,6 +173,8 @@ call s:h("Keyword",       { "fg": s:pink })
 "        Repeat"
 "        Exception"
 
+call s:h("CommentURL",    { "fg": s:grey, "format": "italic" })
+
 call s:h("PreProc",       { "fg": s:green })
 call s:h("Include",       { "fg": s:white })
 call s:h("Define",        { "fg": s:pink })
