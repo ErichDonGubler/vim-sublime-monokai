@@ -275,6 +275,7 @@ call s:h("jsRegexpBackRef",     { "fg": s:pink })
 call s:h("jsRegexpMod",         { "fg": s:pink }) " Technically this is extra from Sublime, but it looks nice.
 call s:h("jsRegexpOr",          { "fg": s:pink })
 call s:h("jsReturn",            { "fg": s:pink })
+call s:h("jsStatement",         { "fg": s:pink })
 call s:h("jsStatic",            { "fg": s:aqua })
 call s:h("jsStorageClass",      { "fg": s:aqua })
 call s:h("jsSuper",             { "fg": s:orange, "format": "italic" })
