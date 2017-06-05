@@ -317,12 +317,16 @@ call s:h("cssValueLength",      { "fg": s:purple })
 call s:h("lessVariable",        { "fg": s:green })
 
 " SASS
-call s:h("sassAmpersand",       { "fg": s:pink })
-call s:h("sassClass",           { "fg": s:green })
-call s:h("sassCssAttribute",    { "fg": s:aqua })
-call s:h("sassMixinName",       { "fg": s:aqua })
-call s:h("sassMixing",          { "fg": s:pink })
-call s:h("sassVariable",        { "fg": s:white })
+call s:h("sassAmpersand",    { "fg": s:pink })
+call s:h("sassClass",        { "fg": s:green })
+call s:h("sassCssAttribute", { "fg": s:aqua })
+call s:h("sassInclude",      { "fg": s:pink })
+call s:h("sassMixinName",    { "fg": s:aqua }) " FIXME: Definitions aren't green!
+call s:h("sassMixing",       { "fg": s:pink })
+call s:h("sassProperty",     { "fg": s:aqua })
+call s:h("sassSelectorOp",   { "fg": s:pink })
+call s:h("sassVariable",     { "fg": s:white })
+
 
 " ruby
 call s:h("rubyInterpolationDelimiter",  {})
