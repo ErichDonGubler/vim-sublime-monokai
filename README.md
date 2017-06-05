@@ -7,7 +7,7 @@ Refined monokai color scheme for `vim`. It's derived from the work put into:
 
 I noticed that there were several places where the highlighting wasn't entirely faithful to that of Sublime, which is my second choice for editing in my day-to-day. The purpose of this project is to provide an experience that matches Sublime as closely as possible.
 
-Note that, in my case, I use several plugins to enhance my own highlighting and ctags experience. Where possible, the dependent plugins have been noted for languages whose highlighting would otherwise be impossible to make equivalent to Sublime.
+Note that, in my case, I use several plugins to enhance my own highlighting and ctags experience. Where possible, the dependent plugins have been noted for languages whose highlighting would otherwise be impossible to make equivalent to Sublime. Conflicts with other plugins that I've used have been noted. You will NOT get full fidelity with Sublime's highlighting if you use these conflicting plugins with this color scheme enabled.
 
 ## Installation
 
@@ -48,8 +48,11 @@ In order to provide an experience with parity to Sublime, this color scheme inte
 ### Javascript
 
 1. [vim-javascript](https://github.com/pangloss/vim-javascript) for the core language
-2. [vim-javascript-lib](https://github.com/crusoexia/vim-javascript-lib), for popular Javascript librarie, like [underscore](http://underscorejs.org/) and
-[Backbone](http://backbonejs.org/).
+2. [vim-javascript-lib](https://github.com/crusoexia/vim-javascript-lib), for popular Javascript libraries, like [underscore](http://underscorejs.org/) and [Backbone](http://backbonejs.org/).
+
+#### Conflicts with Javascript
+
+* [cSyntaxAfter](https://github.com/vim-scripts/cSyntaxAfter) plugin conflicts on many operator groups.
 
 ## Screenshots
 
