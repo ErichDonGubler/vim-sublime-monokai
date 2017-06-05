@@ -372,6 +372,15 @@ call s:h("cppSTLios", { "fg": s:aqua })
 " D
 call s:h("dExternal", { "fg": s:pink })
 
+" Rust
+call s:h("rustCommentLineDoc", { "fg": s:grey })
+call s:h("rustConditional",    { "fg": s:pink })
+call s:h("rustFuncCall",       { "fg": s:aqua })
+call s:h("rustIdentifier",     { "fg": s:white })
+call s:h("rustMacro",          { "fg": s:aqua })
+call s:h("rustModPathSep",     { "fg": s:white })
+call s:h("rustRepeat",         { "fg": s:pink })
+
 " Makefile
 call s:h("makeCommands",    { "fg": s:white })
 call s:h("makeCmdNextLine", { "fg": s:white })
