@@ -402,3 +402,10 @@ call s:h("shDerefVar",                  { "fg": s:aqua })
 call s:h("shFunctionKey",               { "fg": s:pink })
 call s:h("shLoop",                      { "fg": s:pink })
 
+" Python
+call s:h("pythonConditional",           { "fg": s:pink })
+call s:h("pythonStatement", { "fg": s:aqua })
+call s:h("pythonInclude", { "fg": s:pink })
+call s:h("pythonException", { "fg": s:pink })
+call s:h("pythonParam", { "fg": s:orange })
+call s:h("pythonBuiltInObj", { "fg": s:purple })
