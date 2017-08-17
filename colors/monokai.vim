@@ -295,6 +295,7 @@ call s:h("htmlEndTag",          { "fg": s:white })
 call s:h("htmlTagName",         { "fg": s:pink })
 call s:h("htmlArg",             { "fg": s:green })
 call s:h("htmlSpecialChar",     { "fg": s:purple })
+call s:h("htmlSpecialTagName",  { "fg": s:pink })
 
 " Xml
 call s:h("xmlTag",              { "fg": s:pink })
