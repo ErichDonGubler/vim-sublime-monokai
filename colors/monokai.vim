@@ -387,6 +387,7 @@ call s:h("rustFuncCall",       { "fg": s:aqua })
 call s:h("rustIdentifier",     { "fg": s:white })
 call s:h("rustMacro",          { "fg": s:aqua })
 call s:h("rustModPathSep",     { "fg": s:white })
+call s:h("rustQuestionMark",   { "fg": s:pink })
 call s:h("rustRepeat",         { "fg": s:pink })
 
 " Makefile
