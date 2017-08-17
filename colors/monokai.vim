@@ -69,16 +69,16 @@ endfunction
 " Palettes
 " --------
 
-
-let s:white       = { "gui": "#E8E8E3", "cterm": "252" }
-let s:black       = { "gui": "#272822", "cterm": "234" }
-let s:lightblack  = { "gui": "#2D2E27", "cterm": "235" }
-let s:lightblack2 = { "gui": "#383a3e", "cterm": "236" }
-let s:darkblack   = { "gui": "#211F1C", "cterm": "233" }
-let s:grey        = { "gui": "#8F908A", "cterm": "243" }
-let s:lightgrey   = { "gui": "#575b61", "cterm": "237" }
-let s:darkgrey    = { "gui": "#64645e", "cterm": "239" }
-let s:warmgrey    = { "gui": "#75715E", "cterm": "59" }
+let s:bright_white = { "gui": "#FFFFFF", "cterm": "231" }
+let s:white        = { "gui": "#E8E8E3", "cterm": "252" }
+let s:black        = { "gui": "#272822", "cterm": "234" }
+let s:lightblack   = { "gui": "#2D2E27", "cterm": "235" }
+let s:lightblack2  = { "gui": "#383a3e", "cterm": "236" }
+let s:darkblack    = { "gui": "#211F1C", "cterm": "233" }
+let s:grey         = { "gui": "#8F908A", "cterm": "243" }
+let s:lightgrey    = { "gui": "#575b61", "cterm": "237" }
+let s:darkgrey     = { "gui": "#64645e", "cterm": "239" }
+let s:warmgrey     = { "gui": "#75715E", "cterm": "59" }
 
 let s:pink        = { "gui": "#F92772", "cterm": "197" }
 let s:green       = { "gui": "#A6E22D", "cterm": "148" }
@@ -99,31 +99,33 @@ let s:changebg    = { "gui": "#5f5f87", "cterm": "60" }
 " ------------
 
 " editor
-call s:h("Normal",        { "fg": s:white,      "bg": s:black })
-call s:h("ColorColumn",   {                     "bg": s:lightblack })
-call s:h("CursorColumn",  {                     "bg": s:lightblack2 })
-call s:h("CursorLine",    {                     "bg": s:lightblack2 })
-call s:h("NonText",       { "fg": s:lightgrey })
-call s:h("StatusLine",    { "fg": s:warmgrey,   "bg": s:black,        "format": "reverse" })
-call s:h("StatusLineNC",  { "fg": s:darkgrey,   "bg": s:warmgrey,     "format": "reverse" })
-call s:h("TabLine",       { "fg": s:white,      "bg": s:darkblack,    "format": "reverse" })
-call s:h("Visual",        {                     "bg": s:lightgrey })
-call s:h("Search",        { "fg": s:black,      "bg": s:yellow })
-call s:h("MatchParen",    { "fg": s:black,      "bg": s:purple })
-call s:h("Question",      { "fg": s:yellow })
-call s:h("ModeMsg",       { "fg": s:yellow })
-call s:h("MoreMsg",       { "fg": s:yellow })
-call s:h("ErrorMsg",      { "fg": s:black,      "bg": s:red,          "format": "standout" })
-call s:h("WarningMsg",    { "fg": s:red })
-call s:h("VertSplit",     { "fg": s:darkgrey,   "bg": s:darkblack })
-call s:h("LineNr",        { "fg": s:grey,       "bg": s:lightblack })
-call s:h("CursorLineNr",  { "fg": s:orange,     "bg": s:lightblack })
-call s:h("SignColumn",    {                     "bg": s:lightblack })
+call s:h("Normal",       { "fg": s:white,      "bg": s:black })
+call s:h("ColorColumn",  { "bg": s:lightblack })
+call s:h("CursorColumn", { "bg": s:lightblack2 })
+call s:h("CursorLine",   { "bg": s:lightblack2 })
+call s:h("NonText",      { "fg": s:lightgrey })
+call s:h("StatusLine",   { "fg": s:warmgrey,   "bg": s:black,        "format": "reverse" })
+call s:h("StatusLineNC", { "fg": s:darkgrey,   "bg": s:warmgrey,     "format": "reverse" })
+call s:h("TabLine",      { "fg": s:white,      "bg": s:darkgrey })
+call s:h("TabLineFill",  { "fg": s:grey,       "bg": s:darkgrey })
+call s:h("TabLineSel",   { "fg": s:bright_white,      "bg": s:grey })
+call s:h("Visual",       { "bg": s:lightgrey })
+call s:h("Search",       { "fg": s:black,      "bg": s:yellow })
+call s:h("MatchParen",   { "fg": s:black,      "bg": s:purple })
+call s:h("Question",     { "fg": s:yellow })
+call s:h("ModeMsg",      { "fg": s:yellow })
+call s:h("MoreMsg",      { "fg": s:yellow })
+call s:h("ErrorMsg",     { "fg": s:black,      "bg": s:red,          "format": "standout" })
+call s:h("WarningMsg",   { "fg": s:red })
+call s:h("VertSplit",    { "fg": s:darkgrey,   "bg": s:darkblack })
+call s:h("LineNr",       { "fg": s:grey,       "bg": s:lightblack })
+call s:h("CursorLineNr", { "fg": s:orange,     "bg": s:lightblack })
+call s:h("SignColumn",   { "bg": s:lightblack })
 
 " misc
-call s:h("SpecialKey",    { "fg": s:lightblack2 })
-call s:h("Title",         { "fg": s:yellow })
-call s:h("Directory",     { "fg": s:aqua })
+call s:h("SpecialKey", { "fg": s:lightblack2 })
+call s:h("Title",      { "fg": s:yellow })
+call s:h("Directory",  { "fg": s:aqua })
 
 " match NoHighLight /\s\+/
 " call s:h("NoHighLight",   { "fg": s:lightblack, "bg": s:lightblack2 })
