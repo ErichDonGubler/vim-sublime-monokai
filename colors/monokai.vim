@@ -128,6 +128,10 @@ call s:h("Directory",  { "fg": s:aqua })
 " call s:h("NoHighLight",   { "fg": s:lightblack, "bg": s:lightblack2 })
 
 " diff
+call s:h("diffFile",      { "fg": s:warmgrey })
+call s:h("diffIndexLine", { "fg": s:warmgrey })
+call s:h("diffRemoved",   { "fg": s:pink })
+call s:h("diffSubname",   { "fg": s:warmgrey })
 call s:h("DiffAdd",       { "fg": s:addfg,      "bg": s:addbg })
 call s:h("DiffDelete",    { "fg": s:black,      "bg": s:delbg })
 call s:h("DiffChange",    { "fg": s:changefg,   "bg": s:changebg })
