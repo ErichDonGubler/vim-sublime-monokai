@@ -28,6 +28,20 @@ Copy the following commands to your `~/.vimrc`:
 ```viml
 syntax on
 colorscheme monokai
+```
+
+Terminal support
+----------------
+
+If you are using a terminal which support truecolor like **iterm2**, enable the gui color by adding below setting in `~/.vimrc` or `~/.vim/init.vim`
+
+```VimL
+set termguicolors
+```
+
+Otherwise, use below setting to activate the 256 color in terminal
+
+```VimL
 set t_Co=256  " vim-sublime-monokai now only support 256 colours in terminal.
 ```
 
