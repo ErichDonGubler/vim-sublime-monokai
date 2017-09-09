@@ -212,6 +212,7 @@ call s:h('SublimeBuiltinType',   { 'fg': s:aqua, 'format': 'italic' })
 call s:h('SublimeContextParam',  { 'fg': s:orange, 'format': 'italic' })
 hi! link SublimeDocumentation SublimeGrey
 hi! link SublimeFunctionCall SublimeAqua
+hi! link SublimeUserAttribute SublimeGrey
 
 " Bash
 
@@ -427,6 +428,9 @@ hi! link rubyBlockParameter           SublimeOrange
 
 hi! link rustCommentLineDoc SublimeDocumentation
 hi! link rustConditional    Conditional
+hi! link rustAttribute      SublimeGrey
+hi! link rustDerive         SublimeGrey
+hi! link rustDeriveTrait    SublimeGrey
 hi! link rustFuncCall       SublimeFunctionCall
 hi! link rustIdentifier     Normal
 hi! link rustModPathSep     Normal
