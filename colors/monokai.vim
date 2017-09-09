@@ -295,6 +295,7 @@ hi! link htmlArg            Tag
 hi! link htmlLink           Normal
 hi! link htmlSpecialTagName htmlTagName
 hi! link htmlSpecialChar    Special
+hi! link htmlTagName        Keyword
 
 " Java
 
