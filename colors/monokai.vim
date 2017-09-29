@@ -208,7 +208,7 @@ hi! link Todo Comment
 
 " Some highlighting groups custom to the Sublime Monokai theme
 
-call s:h('SublimeBuiltinType',   { 'fg': s:aqua, 'format': 'italic' })
+call s:h('SublimeType',   { 'fg': s:aqua, 'format': 'italic' })
 call s:h('SublimeContextParam',  { 'fg': s:orange, 'format': 'italic' })
 hi! link SublimeDocumentation SublimeGrey
 hi! link SublimeFunctionCall SublimeAqua
@@ -229,12 +229,12 @@ hi! link shSet         Keyword
 
 hi! link cAnsiFunction SublimeFunctionCall
 hi! link cFormat       Special
-hi! link cType         SublimeBuiltinType
 hi! link cLabel        SublimePink
-hi! link cStructure    SublimePink
 hi! link cStorageClass SublimePink
 hi! link cInclude      SublimePink
 hi! link cDefine       SublimeGreen
+hi! link cStructure    SublimeType
+hi! link cType         SublimeType
 " FIXME: Function definitions
 
 " CSS
@@ -304,11 +304,11 @@ hi! link javaConditional      Keyword
 hi! link javaExceptions       Keyword
 hi! link javaFunction         SublimeAqua
 " FIXME: This isn't a builtin...don't other languages use italics for types?
-hi! link javaNonPrimitiveType SublimeBuiltinType
+hi! link javaNonPrimitiveType SublimeType
 hi! link javaRepeat           Keyword
 hi! link javaSpecialChar      Special
 hi! link javaStatement        Keyword
-hi! link javaType             SublimeBuiltinType
+hi! link javaType             SublimeType
 call s:h('jpropertiesIdentifier', { 'fg': s:pink })
 
 " JavaScript
