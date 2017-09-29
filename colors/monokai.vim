@@ -264,8 +264,12 @@ hi! link cssValueLength     Constant
 
 " C++
 
+" XXX: This is imperfect, as this highlights the expression for the `#if`s
+" too.
+hi! link cCppOutWrapper  Keyword
 hi! link cppSTLfunction SublimeFunctionCall
 hi! link cppSTLios      SublimeAqua
+hi! link cppStatement   Keyword
 
 " D
 
