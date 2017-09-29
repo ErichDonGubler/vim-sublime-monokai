@@ -271,6 +271,24 @@ hi! link cppSTLfunction SublimeFunctionCall
 hi! link cppSTLios      SublimeAqua
 hi! link cppStatement   Keyword
 
+" C#
+
+hi! link csClass                SublimeType
+hi! link csMethodTag            SublimeType
+" XXX: This seems to correspond to directives in general -- region names
+" SHOULDN'T be included, though.
+hi! link csPreCondit            Keyword
+hi! link csTypeDecleration      SublimeType
+hi! link csType                 SublimeType
+hi! link csUnspecifiedStatement Keyword
+hi! link csXmlTag               xmlTagName
+hi! link csXmlComment           SublimeDocumentation
+"FIXME: Need some local links for XML getting set to the right color
+"FIXME: Operators aren't red...
+"FIXME: Args aren't right either -- they don't have a unique group yet
+"FIXME: `namespace` is a type highlight in Sublime
+"FIXME: No function call groups
+
 " D
 
 hi! link dExternal Keyword
