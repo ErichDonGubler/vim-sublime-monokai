@@ -456,6 +456,12 @@ hi! link sassProperty     SublimeAqua
 hi! link sassSelectorOp   Operator
 hi! link sassVariable     Normal
 
+" SQL
+hi! link Quote        String
+hi! link sqlFunction  SublimeFunctionCall
+hi! link sqlKeyword   Keyword
+hi! link sqlStatement Keyword
+
 " Syntastic
 
 hi! link SyntasticErrorSign Error
