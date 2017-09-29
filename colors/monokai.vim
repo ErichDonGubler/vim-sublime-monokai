@@ -228,11 +228,11 @@ hi! link shSet         Keyword
 " C
 
 hi! link cAnsiFunction SublimeFunctionCall
+hi! link cDefine       SublimeGreen
 hi! link cFormat       Special
+hi! link cInclude      SublimePink
 hi! link cLabel        SublimePink
 hi! link cStorageClass SublimePink
-hi! link cInclude      SublimePink
-hi! link cDefine       SublimeGreen
 hi! link cStructure    SublimeType
 hi! link cType         SublimeType
 " FIXME: Function definitions
