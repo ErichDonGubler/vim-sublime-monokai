@@ -333,6 +333,24 @@ hi! link diffSubname   SublimeWarmGrey
 " call s:h('erubyDelimiter',              {})
 hi! link erubyRailsMethod SublimeAqua
 
+" Git
+
+hi! link gitrebaseCommit  Comment
+hi! link gitrebaseDrop    Error
+hi! link gitrebaseEdit    Keyword
+hi! link gitrebaseExec    Keyword
+hi! link gitrebaseFixup   Keyword
+" FIXME: Make this cooler in extensions!
+hi! link gitrebaseHash    Comment
+hi! link gitrebasePick    Keyword
+hi! link gitrebaseReword  Keyword
+hi! link gitrebaseSquash  Keyword
+hi! link gitrebaseSummary String
+" XXX: Note that highlighting inside the always-present help from Git in
+" comments is not available in vim's current highlighting version.
+" FIXME: Erich prefers different colors for the different operations. More
+" variations!
+
 " HTML
 " This partially depends on XML -- make sure that groups in XML don't
 " adversely affect this!
