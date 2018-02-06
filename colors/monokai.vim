@@ -247,14 +247,16 @@ hi! link dosbatchSwitch      Normal
 
 " C
 
-hi! link cAnsiFunction SublimeFunctionCall
-hi! link cDefine       SublimeGreen
-hi! link cFormat       Special
-hi! link cInclude      SublimePink
-hi! link cLabel        SublimePink
-hi! link cStorageClass SublimePink
-hi! link cStructure    SublimeType
-hi! link cType         SublimeType
+hi! link cAnsiFunction     SublimeFunctionCall
+hi! link cDefine           SublimeGreen
+hi! link cFormat           Special
+hi! link cInclude          SublimePink
+hi! link cLabel            SublimePink
+hi! link cSpecialCharacter SublimePurple
+hi! link cStatement        Keyword
+hi! link cStorageClass     SublimePink
+hi! link cStructure        SublimeType
+hi! link cType             SublimeType
 " FIXME: Function definitions
 
 " CSS
