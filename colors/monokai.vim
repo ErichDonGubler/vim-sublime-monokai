@@ -289,9 +289,14 @@ hi! link cssValueLength     Constant
 " XXX: This is imperfect, as this highlights the expression for the `#if`s
 " too.
 hi! link cCppOutWrapper  Keyword
-hi! link cppSTLfunction SublimeFunctionCall
-hi! link cppSTLios      SublimeAqua
-hi! link cppStatement   Keyword
+hi! link cppStatement    Keyword
+hi! link cppSTLException SublimeType
+hi! link cppSTLfunction  SublimeFunctionCall
+" XXX: There may be no special highlighting here in Sublime itself
+hi! link cppSTLios       SublimeAqua
+" XXX: There may be no special highlighting here in Sublime itself
+hi! link cppSTLnamespace SublimePurple
+hi! link cppType         SublimeType
 
 " C#
 
