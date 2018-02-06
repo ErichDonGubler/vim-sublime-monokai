@@ -225,6 +225,26 @@ hi! link shLoop        Keyword
 hi! link shQuote       String
 hi! link shSet         Keyword
 
+" Batch
+
+hi! link dosbatchImplicit    Keyword
+hi! link dosbatchLabel       Normal
+" FIXME: This should have its own group, like SublimeEscapedSequence
+hi! link dosbatchSpecialChar SublimePurple
+hi! link dosbatchSwitch      Normal
+" FIXME: Variables don't have their own highlighting in Sublime
+" hi! link dosbatchVariable    SublimeAqua
+" XXX: string highlight is used for echo commands, but Sublime doesn't
+" highlight at all
+" XXX: Sublime sets everything to the right of an assignment to be a string
+" color, but Vim doesn't
+
+" XXX: Create an extra flag for "nice" stuff
+" hi! link dosbatchLabel       Tag
+" hi! link dosbatchStatement   Keyword
+" hi! link dosbatchSwitch      SublimePurple
+" hi! link dosbatchVariable    SublimeAqua
+
 " C
 
 hi! link cAnsiFunction SublimeFunctionCall
