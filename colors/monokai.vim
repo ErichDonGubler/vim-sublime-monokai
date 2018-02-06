@@ -325,6 +325,7 @@ hi! link dExternal Keyword
 hi! link diffAdded     SublimeGreen
 hi! link diffFile      SublimeWarmGrey
 hi! link diffIndexLine SublimeWarmGrey
+hi! link diffLine      SublimeWarmGrey
 hi! link diffRemoved   SublimePink
 hi! link diffSubname   SublimeWarmGrey
 
