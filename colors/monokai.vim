@@ -567,6 +567,25 @@ hi! link xmlEndTag          Keyword
 hi! link xmlProcessingDelim Normal
 hi! link xmlTagName         Keyword
 
+" YAML
+
+hi! link yamlBlockCollectionItemStart Normal
+hi! link yamlBlockMappingKey          Keyword
+hi! link yamlEscape                   Special
+" Variation: I kind of like keeping these Special
+hi! link yamlFlowIndicator            Normal
+hi! link yamlFlowMappingKey           Keyword
+hi! link yamlKeyValueDelimiter        Normal
+hi! link yamlPlainScalar              String
+" XXX: Other noted deficiencies:
+" * "yes"/"no" values are actually not recognized as yamlBool groups in Vim.
+" * Literal/folded block scalars don't have their own group right now in Vim.
+" * yamlInteger gets applied to leading numbers in literal/folded block
+"     scalars in Vim.
+" * References aren't handled at all by Vim, it seems.
+" * Vim incorrectly highlights for comments after a scalar value has started.
+" A good place to see these in action is: http://www.yaml.org/start.html
+
 " zsh
 
 " Variation: I actually like making these aqua.
