@@ -290,6 +290,8 @@ hi! link cssValueLength     Constant
 " too.
 hi! link cCppOutWrapper  Keyword
 hi! link cppStatement    Keyword
+" XXX: This is too inclusive of the `namespace` keyword
+hi! link cppStructure    SublimeType
 hi! link cppSTLException SublimeType
 hi! link cppSTLfunction  SublimeFunctionCall
 " XXX: There may be no special highlighting here in Sublime itself
