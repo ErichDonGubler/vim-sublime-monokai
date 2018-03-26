@@ -566,3 +566,25 @@ hi! link xmlEndTag          Keyword
 " Variation: I actually liked it when this was faded
 hi! link xmlProcessingDelim Normal
 hi! link xmlTagName         Keyword
+
+" zsh
+
+" Variation: I actually like making these aqua.
+hi! link zshDeref    Normal
+hi! link zshFunction Tag
+" XXX: This isn't awesome because it includes too much, like semicolons. :(
+hi! link zshOperator Operator
+" Variation: This actually looks nicer as a Special.
+hi! link zshOption   Normal
+hi! link zshQuoted   Special
+" Variation: I'd probably prefer this to be something else, actually.
+" XXX: This doesn't work particularly well here...but most of the time, we're
+"     in quotes, so let's go with that.
+hi! link zshSubst    String
+" Variation: I actually like keeping this as Type.
+hi! link zshTypes    Keyword
+" Other variations:
+" XXX: Other noted deficiencies:
+" * Semicolons in `if` blocks are `Keyword`ed in Sublime but not distinct in
+"     Vim
+" * Commands aren't distinct from builtins and keywords in Vim
