@@ -168,43 +168,43 @@ hi! link WarningMsg SublimeRed
 
 " Generic Syntax Highlighting (see reference: 'NAMING CONVENTIONS' at http://vimdoc.sourceforge.net/htmldoc/syntax.html#group-name)
 
-hi! link Comment SublimeWarmGrey
-hi! link Constant SublimePurple
-hi! link String SublimeYellow
-hi! link Character SublimeYellow
-hi! link Number SublimePurple
-hi! link Boolean SublimePurple
-hi! link Float SublimePurple
-hi! link Identifier SublimeWhite
-hi! link Function SublimeWhite
-hi! link Type SublimeAqua
+hi! link Comment      SublimeWarmGrey
+hi! link Constant     SublimePurple
+hi! link String       SublimeYellow
+hi! link Character    SublimeYellow
+hi! link Number       SublimePurple
+hi! link Boolean      SublimePurple
+hi! link Float        SublimePurple
+hi! link Identifier   SublimeWhite
+hi! link Function     SublimeWhite
+hi! link Type         SublimeAqua
 hi! link StorageClass SublimePink
-hi! link Structure SublimePink
-hi! link Typedef SublimeAqua
-hi! link Statement SublimeWhite
-hi! link Conditional SublimePink
-hi! link Repeat SublimePink
-hi! link Label SublimePink
-hi! link Operator SublimePink
-hi! link Keyword SublimePink
-hi! link Exception SublimePink
+hi! link Structure    SublimePink
+hi! link Typedef      SublimeAqua
+hi! link Statement    SublimeWhite
+hi! link Conditional  SublimePink
+hi! link Repeat       SublimePink
+hi! link Label        SublimePink
+hi! link Operator     SublimePink
+hi! link Keyword      SublimePink
+hi! link Exception    SublimePink
 call s:h('CommentURL',    { 'fg': s:grey, 'format': 'italic' })
 
-hi! link PreProc SublimeGreen
-hi! link Include SublimeWhite
-hi! link Define SublimePink
-hi! link Macro SublimeGreen
-hi! link PreCondit SublimeWhite
-hi! link Special SublimePurple
-hi! link SpecialChar SublimePink
-hi! link Tag SublimeGreen
-hi! link Delimiter SublimePink
+hi! link PreProc        SublimeGreen
+hi! link Include        SublimeWhite
+hi! link Define         SublimePink
+hi! link Macro          SublimeGreen
+hi! link PreCondit      SublimeWhite
+hi! link Special        SublimePurple
+hi! link SpecialChar    SublimePink
+hi! link Tag            SublimeGreen
+hi! link Delimiter      SublimePink
 hi! link SpecialComment SublimeAqua
 " call s:h('Debug'          {})
 call s:h('Underlined',    { 'format': 'underline' })
 " call s:h('Ignore',        {})
 call s:h('Error',         { 'fg': s:red, 'bg': s:darkred })
-hi! link Todo Comment
+hi! link Todo           Comment
 
 " Some highlighting groups custom to the Sublime Monokai theme
 
