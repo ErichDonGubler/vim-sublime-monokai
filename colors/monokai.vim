@@ -214,16 +214,25 @@ hi! link SublimeDocumentation SublimeGrey
 hi! link SublimeFunctionCall SublimeAqua
 hi! link SublimeUserAttribute SublimeGrey
 
-" Bash
+" Bash/POSIX shell
 
 hi! link shConditional Conditional
-hi! link shDerefOff    SublimeWhite
+hi! link shDerefOff    Normal
 hi! link shDerefSimple SublimeAqua
 hi! link shDerefVar    SublimeAqua
 hi! link shFunctionKey SublimePink
 hi! link shLoop        Keyword
 hi! link shQuote       String
 hi! link shSet         Keyword
+hi! link shStatement   SublimePink
+" XXX: Other noted deficiencies
+" * Can't highlight POSIX builtins right because shStatement is later in the
+"     highlight stack
+" * Can't override shOption to be "normal" because it could be within a string
+"     or substitution. It looks okay anyway. :)
+" * shCommandSub can't be override for a similar reason to shOption
+" * Boolean operators and subsequent commands don't have the right
+"     highlighting
 
 " Batch
 
