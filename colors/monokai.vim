@@ -129,7 +129,7 @@ call s:h('SublimeDarkRed',     { 'fg': s:darkred      })
 
 " Default highlight groups (see ':help highlight-default' or http://vimdoc.sourceforge.net/htmldoc/syntax.html#highlight-groups)
 
-hi! link ColorColumn SublimeLightBlack
+call s:h('ColorColumn',  { 'bg': s:lightblack2                                                })
 hi! link Conceal SublimeLightGrey
 call s:h('CursorLine',   { 'bg': s:lightblack2                                                })
 call s:h('CursorLineNr', { 'fg': s:orange,     'bg': s:lightblack                             })
