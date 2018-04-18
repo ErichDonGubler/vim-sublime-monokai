@@ -313,6 +313,7 @@ hi! link cppType         SublimeType
 " C#
 
 hi! link csClass                SublimeType
+hi! link csContextualStatement  Keyword
 hi! link csMethodTag            SublimeType
 " XXX: This seems to correspond to directives in general -- region names
 " SHOULDN'T be included, though.
