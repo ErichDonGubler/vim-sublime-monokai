@@ -314,6 +314,7 @@ hi! link cppType         SublimeType
 
 hi! link csClass                SublimeType
 hi! link csContextualStatement  Keyword
+hi! link csIface                SublimeType
 hi! link csMethodTag            SublimeType
 " XXX: This seems to correspond to directives in general -- region names
 " SHOULDN'T be included, though.
