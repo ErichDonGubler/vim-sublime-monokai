@@ -367,6 +367,23 @@ hi! link gitrebaseSummary String
 " FIXME: Erich prefers different colors for the different operations. More
 " variations!
 
+" GraphViz
+" Variation: I actually like to keep these as Keyword, but Sublime does this
+" differently.
+hi! link dotBraceEncl Normal
+hi! link dotBrackEncl Normal
+" XXX: This colors way more stuff than Sublime does, but otherwise we'd miss
+" out on operator highlights like with equals signs in attribute value
+" definitions.
+hi! link dotKeyChar Keyword
+hi! link dotKeyword SublimeType
+" XXX: Other noted deficiencies:
+" * `graph` keyword isn't correctly classified into a keyword, Sublime does.
+"     This can be fixed with `syn keyword dotKeyword graph`.
+" * Neither Sublime nor Vim highlight `--` in undirected graphs.
+" * Sublime doesn't treat semicolons as a keyword here, Vim does.
+" * Vim doesn't distinctly identify declarations like `digraph *blah* { ... }`
+
 " HTML
 " This partially depends on XML -- make sure that groups in XML don't
 " adversely affect this!
