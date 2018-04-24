@@ -382,7 +382,8 @@ hi! link dotKeyword SublimeType
 "     This can be fixed with `syn keyword dotKeyword graph`.
 " * Neither Sublime nor Vim highlight `--` in undirected graphs.
 " * Sublime doesn't treat semicolons as a keyword here, Vim does.
-" * Vim doesn't distinctly identify declarations like `digraph *blah* { ... }`
+" * Vim doesn't distinctly identify declarations like `digraph *blah* { ... }`.
+" * Vim doesn't have a group for escape chars (i.e., for `label` values).
 
 " HTML
 " This partially depends on XML -- make sure that groups in XML don't
