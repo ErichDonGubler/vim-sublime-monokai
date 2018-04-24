@@ -59,7 +59,7 @@ If you are using a font that support italics in terminal, add the following
 to your `.vimrc`:
 
 ```viml
-let g:monokai_term_italic = 1
+let g:sublimemonokai_term_italic = 1
 ```
 
 ## Language-specific configuration
