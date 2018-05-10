@@ -367,6 +367,13 @@ hi! link gitrebaseSummary String
 " FIXME: Erich prefers different colors for the different operations. More
 " variations!
 
+" vim-gitgutter
+
+hi! link GitGutterAdd          SublimeGreen
+hi! link GitGutterChange       SublimeYellow
+hi! link GitGutterDelete       SublimePink
+hi! link GitGutterChangeDelete SublimeOrange
+
 " GraphViz
 " Variation: I actually like to keep these as Keyword, but Sublime does this
 " differently.
