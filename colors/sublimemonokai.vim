@@ -620,13 +620,17 @@ hi! link yamlFlowMappingKey           Keyword
 hi! link yamlKeyValueDelimiter        Normal
 hi! link yamlPlainScalar              String
 " XXX: Other noted deficiencies:
+" A good place to see these in action is: http://www.yaml.org/start.html
 " * "yes"/"no" values are actually not recognized as yamlBool groups in Vim.
 " * Literal/folded block scalars don't have their own group right now in Vim.
 " * yamlInteger gets applied to leading numbers in literal/folded block
 "     scalars in Vim.
 " * References aren't handled at all by Vim, it seems.
 " * Vim incorrectly highlights for comments after a scalar value has started.
-" A good place to see these in action is: http://www.yaml.org/start.html
+" Other noted deficiencies when using YAML to manually analyze binary files:
+" * Hex literals as map keys are highlighted in Sublime, not in Vim.
+" * Sublime is more permissive about what it highlights for keys, but Sublime
+"     may reject them as invalid; i.e., "???" (minus quotes)
 
 " zsh
 
