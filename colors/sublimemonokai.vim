@@ -317,19 +317,21 @@ hi! link csClass                SublimeType
 hi! link csContextualStatement  Keyword
 hi! link csIface                SublimeType
 hi! link csMethodTag            SublimeType
-" XXX: This seems to correspond to directives in general -- region names
-" SHOULDN'T be included, though.
 hi! link csPreCondit            Keyword
 hi! link csTypeDecleration      SublimeType
 hi! link csType                 SublimeType
 hi! link csUnspecifiedStatement Keyword
 hi! link csXmlTag               xmlTagName
 hi! link csXmlComment           SublimeDocumentation
-"FIXME: Need some local links for XML getting set to the right color
-"FIXME: Operators aren't red...
-"FIXME: Args aren't right either -- they don't have a unique group yet
-"FIXME: `namespace` is a type highlight in Sublime
-"FIXME: No function call groups
+" XXX: Other noted deficiencies:
+" *  Need some local links for XML getting set to the right color
+" *  Operators aren't red in Vim, but are in Sublime.
+" *  Function arguments aren't distinguished with their own highlight group
+" *  `namespace` is a type in Sublime's highlighting, but is a `csStorage` in
+"     Vim
+" *  No function call groups exist in Vim.
+" *  Region highlighting has no way to distinguish between region
+"     preprocess keyword and region name.
 
 " D
 
