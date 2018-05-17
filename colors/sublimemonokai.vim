@@ -129,42 +129,42 @@ call s:h('SublimeDarkRed',     { 'fg': s:darkred      })
 
 " Default highlight groups (see ':help highlight-default' or http://vimdoc.sourceforge.net/htmldoc/syntax.html#highlight-groups)
 
-call s:h('ColorColumn',  { 'bg': s:lightblack2                                             })
+call s:h('ColorColumn',  {                      'bg': s:lightblack2                                })
 hi! link Conceal SublimeLightGrey
-call s:h('CursorColumn', { 'bg': s:lightblack2                                             })
-call s:h('CursorLine',   { 'bg': s:lightblack2                                             })
-call s:h('CursorLineNr', { 'fg': s:orange,      'bg': s:lightblack                         })
-call s:h('DiffAdd',      { 'fg': s:addfg,       'bg': s:addbg                              })
-call s:h('DiffChange',   { 'fg': s:changefg,    'bg': s:changebg                           })
-call s:h('DiffDelete',   { 'fg': s:black,       'bg': s:delbg                              })
-call s:h('DiffText',     { 'fg': s:black,       'bg': s:aqua                               })
+call s:h('CursorColumn', {                      'bg': s:lightblack2                                })
+call s:h('CursorLine',   {                      'bg': s:lightblack2                                })
+call s:h('CursorLineNr', { 'fg': s:orange,      'bg': s:lightblack                                 })
+call s:h('DiffAdd',      { 'fg': s:addfg,       'bg': s:addbg                                      })
+call s:h('DiffChange',   { 'fg': s:changefg,    'bg': s:changebg                                   })
+call s:h('DiffDelete',   { 'fg': s:black,       'bg': s:delbg                                      })
+call s:h('DiffText',     { 'fg': s:black,       'bg': s:aqua                                       })
 hi! link Directory SublimeAqua
-call s:h('ErrorMsg',     { 'fg': s:black,       'bg': s:red,      'format': 'standout'     })
+call s:h('ErrorMsg',     { 'fg': s:black,       'bg': s:red,         'format': 'standout'          })
 hi! link FoldColumn SublimeDarkBlack
-call s:h('Folded',       { 'fg': s:warmgrey,    'bg': s:darkblack                          })
-call s:h('Incsearch',    {                                                                 })
-call s:h('LineNr',       { 'fg': s:grey,        'bg': s:lightblack                         })
-call s:h('MatchParen',   { 'fg': s:black,       'bg': s:grey                               })
+call s:h('Folded',       { 'fg': s:warmgrey,    'bg': s:darkblack                                  })
+call s:h('Incsearch',    {                                                                         })
+call s:h('LineNr',       { 'fg': s:grey,        'bg': s:lightblack                                 })
+call s:h('MatchParen',   { 'fg': s:black,       'bg': s:grey,                                      })
 hi! link ModeMsg SublimeYellow
 hi! link MoreMsg SublimeYellow
 hi! link NonText SublimeLightGrey
-call s:h('Normal',       { 'fg': s:white,       'bg': s:black                              })
-call s:h('Pmenu',        { 'fg': s:lightblack,  'bg': s:white                              })
-call s:h('PmenuSbar',    {                                                                 })
-call s:h('PmenuSel',     { 'fg': s:aqua,        'bg': s:black,    'format': 'reverse,bold' })
-call s:h('PmenuThumb',   { 'fg': s:lightblack,  'bg': s:grey                               })
+call s:h('Normal',       { 'fg': s:white,       'bg': s:black                                      })
+call s:h('Pmenu',        { 'fg': s:lightblack,  'bg': s:white                                      })
+call s:h('PmenuSbar',    {                      'bg': s:lightgrey                                  })
+call s:h('PmenuSel',     { 'fg': s:aqua,        'bg': s:black,       'format': 'reverse,bold'      })
+call s:h('PmenuThumb',   { 'fg': s:lightblack,  'bg': s:grey                                       })
 hi! link Question SublimeYellow
-call s:h('Search',       { 'format': 'reverse,underline'                                   })
+call s:h('Search',       {                                           'format': 'reverse,underline' })
 hi! link SignColumn SublimeLightBlack
 hi! link SpecialKey SublimeLightBlack2
-call s:h('StatusLine',   { 'fg': s:warmgrey,    'bg': s:black,    'format': 'reverse'      })
-call s:h('StatusLineNC', { 'fg': s:darkgrey,    'bg': s:warmgrey, 'format': 'reverse'      })
-call s:h('TabLine',      { 'fg': s:white,       'bg': s:darkgrey                           })
-call s:h('TabLineFill',  { 'fg': s:grey,        'bg': s:darkgrey                           })
-call s:h('TabLineSel',   { 'fg': s:brightwhite, 'bg': s:white                              })
+call s:h('StatusLine',   { 'fg': s:warmgrey,    'bg': s:black,       'format': 'reverse'           })
+call s:h('StatusLineNC', { 'fg': s:darkgrey,    'bg': s:warmgrey,    'format': 'reverse'           })
+call s:h('TabLine',      { 'fg': s:white,       'bg': s:darkgrey                                   })
+call s:h('TabLineFill',  { 'fg': s:grey,        'bg': s:darkgrey                                   })
+call s:h('TabLineSel',   { 'fg': s:brightwhite, 'bg': s:white                                      })
 hi! link Title SublimeYellow
-call s:h('VertSplit',    { 'fg': s:darkgrey,    'bg': s:darkblack                          })
-call s:h('Visual',       { 'bg': s:lightgrey                                               })
+call s:h('VertSplit',    { 'fg': s:darkgrey,    'bg': s:darkblack                                  })
+call s:h('Visual',       {                      'bg': s:lightgrey                                  })
 hi! link WarningMsg SublimeRed
 
 " Generic Syntax Highlighting (see reference: 'NAMING CONVENTIONS' at http://vimdoc.sourceforge.net/htmldoc/syntax.html#group-name)
