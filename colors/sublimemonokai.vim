@@ -577,6 +577,18 @@ hi! link sqlStatement Keyword
 hi! link SyntasticErrorSign Error
 call s:h('SyntasticWarningSign',    { 'fg': s:lightblack, 'bg': s:orange })
 
+" Tagbar
+
+hi! link TagbarFoldIcon            SublimePurple
+hi! link TagbarHelp                Comment
+hi! link TagbarKind                Keyword
+hi! link TagbarNestedKind          Keyword
+hi! link TagbarScope               Tag
+hi! link TagbarSignature           Comment
+hi! link TagbarVisibilityPrivate   SublimePink
+hi! link TagbarVisibilityProtected SublimeYellow
+hi! link TagbarVisibilityPublic    SublimeGreen
+
 " VimL
 
 hi! link vimCommand       Keyword
