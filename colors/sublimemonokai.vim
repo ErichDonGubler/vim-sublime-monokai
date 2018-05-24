@@ -366,8 +366,8 @@ hi! link gitrebaseSquash  Keyword
 hi! link gitrebaseSummary String
 " XXX: Note that highlighting inside the always-present help from Git in
 " comments is not available in vim's current highlighting version.
-" FIXME: Erich prefers different colors for the different operations. More
-" variations!
+" Variation: it's actually kinda nice to give each of these different colors
+" like vanilla Vim does.
 
 " vim-gitgutter
 
