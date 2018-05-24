@@ -146,7 +146,7 @@ call s:h('Incsearch',    {                                                      
 call s:h('LineNr',       { 'fg': s:grey,        'bg': s:lightblack                                 })
 " Variation: This looks really nice when made { 'format': 'reverse' } in gVim
 " -- it only works because gVim can control the color of the cursor.
-call s:h('MatchParen',   { 'fg': s:black,       'bg': s:grey,                                      })
+call s:h('MatchParen',   { 'fg': s:white,       'bg': s:grey                                       })
 hi! link ModeMsg SublimeYellow
 hi! link MoreMsg SublimeYellow
 hi! link NonText SublimeLightGrey
