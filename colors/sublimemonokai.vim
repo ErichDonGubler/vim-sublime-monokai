@@ -541,17 +541,32 @@ hi! link rubyBlockParameter           SublimeOrange
 
 " Rust
 
+hi! link rustAttribute      SublimeGrey
 hi! link rustCommentLineDoc SublimeDocumentation
 hi! link rustConditional    Conditional
-hi! link rustAttribute      SublimeGrey
 hi! link rustDerive         SublimeGrey
 hi! link rustDeriveTrait    SublimeGrey
+" Variation: I like making these Special
+hi! link rustEnumVariant    SublimeType
 hi! link rustFuncCall       SublimeFunctionCall
-hi! link rustIdentifier     Normal
-hi! link rustModPathSep     Normal
+hi! link rustFuncName       Tag
+hi! link rustIdentifier     Tag
+" Variation: I actually like making these Special too
+hi! link rustLifetime       Keyword
 hi! link rustMacro          SublimeFunctionCall
+hi! link rustModPathSep     Normal
 hi! link rustQuestionMark   Keyword
 hi! link rustRepeat         Keyword
+" XXX: Deficiencies:
+" * In Sublime, `fn` and `let` keywords are highlighted, but Vim lumps them
+"     with all other keywords
+" * Crate names after `extern crate` are included in `rustIdentifier`, which
+"     is technically more inclusive than Sublime's definition group but not so
+"     bad I don't think it's an okay default.
+" * Sublime does NOT have the `rustEnumVariants` distinction, which is
+"     actually a really nice feature.
+" * No `fn`/lambda param highlighting is available in Vim like in Sublime
+"     here. :(
 
 " SASS
 
