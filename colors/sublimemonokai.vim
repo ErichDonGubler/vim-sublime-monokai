@@ -557,6 +557,7 @@ hi! link rustMacro          SublimeFunctionCall
 hi! link rustModPathSep     Normal
 hi! link rustQuestionMark   Keyword
 hi! link rustRepeat         Keyword
+hi! link rustSelf           SublimeContextParam
 " XXX: Deficiencies:
 " * In Sublime, `fn` and `let` keywords are highlighted, but Vim lumps them
 "     with all other keywords
