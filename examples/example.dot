@@ -1,0 +1,81 @@
+graph wat {
+    a -- b;
+    b -- c;
+    c -- d;
+    d -- e;
+    e -- f;
+    a -- f;
+    a -- c;
+    a -- d;
+    a -- e;
+    b -- d;
+    b -- e;
+    b -- f;
+    c -- e;
+    c -- f;
+    d -- f;
+}
+
+digraph {
+    a -> b[stuff=""];
+    b -> c;
+    c -> d;
+    d -> a;
+}
+
+digraph {
+    label = "wat";
+    a -> b[label="0.2",weight="0.2"];
+    a -> c[label="0.4",weight="0.4"];
+    c -> b[label="0.6",weight="0.6"];
+    c -> e[label="0.6",weight="0.6"];
+    e -> e[label="0.1",weight="0.1"];
+    e -> b[label="0.7",weight="0.7"];
+}
+
+graph {
+	d[label="WOOT"];
+    a -- b -- d -- c -- f[color=red,penwidth=3.0];
+    b -- c;
+    d -- e;
+    e -- f;
+    a -- d;
+}
+
+graph {
+    rankdir=LR; // Left to Right, instead of Top to Bottom
+    a -- { b c d };
+    b -- { c e };
+    c -- { e f };
+    d -- { f g };
+    e -- h;
+    f -- { h i j g };
+    g -- k;
+    h -- { o l };
+    i -- { l m j };
+    j -- { m n k };
+    k -- { n r };
+    l -- { o m };
+    m -- { o p n };
+    n -- { q r };
+    o -- { s p };
+    p -- { s t q };
+    q -- { t r };
+    r -- t;
+    s -- z;
+    t -- z;
+}
+
+graph {
+    rankdir=LR;
+    a -- { b c d }; b -- { c e }; c -- { e f }; d -- { f g }; e -- h;
+    f -- { h i j g }; g -- k; h -- { o l }; i -- { l m j }; j -- { m n k };
+    k -- { n r }; l -- { o m }; m -- { o p n }; n -- { q r };
+    o -- { s p }; p -- { s t q }; q -- { t r }; r -- t; s -- z; t -- z;
+    { rank=same; b, c, d }
+    { rank=same; e, f, g }
+    { rank=same; h, i, j, k }
+    { rank=same; l, m, n }
+    { rank=same; o, p, q, r }
+    { rank=same; s, t }
+}

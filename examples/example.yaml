@@ -1,0 +1,115 @@
+# A list of tasty fruits
+fruits:
+    - Apple
+    - Orange
+    - Strawberry
+    - Mango
+# An employee record
+martin:
+    name: Martin D'vloper
+    job: Developer
+    skill: Elite
+# Employee records
+-  martin:
+    name: Martin D'vloper
+    job: Developer
+    skills:
+      - python
+      - perl
+      - pascal
+-  tabitha:
+    name: Tabitha Bitumen
+    job: Developer
+    skills:
+      - lisp
+      - fortran
+      - erlang
+martin: {name: Martin D'vloper, job: Developer, skill: Elite}
+fruits: ['Apple', 'Orange', 'Strawberry', 'Mango']
+create_key: yes
+needs_agent: no
+knows_oop: True
+likes_emacs: TRUE
+uses_cvs: false
+include_newlines: |
+            exactly as you see
+            will appear these three
+            lines of poetry
+
+fold_newlines: >
+            this is really a
+            single line of text
+            despite appearances
+fold_some_newlines: >
+    a
+    b
+
+    c
+    d
+      e
+    f
+same_as: "a b\nc d\n  e\nf\n"
+# An employee record
+name: Martin D'vloper
+job: Developer
+skill: Elite
+employed: True
+foods:
+    - Apple
+    - Orange
+    - Strawberry
+    - Mango
+languages:
+    perl: Elite
+    python: Elite
+    pascal: Lame
+education: |
+    4 GCSEs
+    3 A-Levels
+    BSc in the Internet of Things
+foo: somebody said I should put a colon here: so I did
+windows_drive: c:
+windows_path: c:\windows
+foo: 'somebody said I should put a colon here: so I did'
+windows_drive: 'c:'
+foo: "somebody said I should put a colon here: so I did"
+windows_drive: "c:"
+foo: "a \t TAB and a \n NEWLINE"
+foo: "{{ variable }}"
+foo: "{{ variable }}/additional/string/literal"
+foo2: "{{ variable }}\\backslashes\\are\\also\\special\\characters"
+foo3: "even if it's just a string literal it must all be quoted"
+foo: "E:\\path\\"rest\\of\\path
+a scalar in block mapping: this } is [ all , valid
+flow mapping: { key: "you { should [ use , quotes here" }
+non_boolean: "yes"
+other_string: "False"
+version: "1.0"
+invoice: 34843
+date   : 2001-01-23
+bill-to: &id001
+    given  : Chris
+    family : Dumars
+    address:
+        lines: |
+            458 Walkman Dr.
+            Suite #292
+        city    : Royal Oak
+        state   : MI
+        postal  : 48046
+ship-to: *id001
+product:
+    - sku         : BL394D
+      quantity    : 4
+      description : Basketball
+      price       : 450.00
+    - sku         : BL4438H
+      quantity    : 1
+      description : Super Hoop
+      price       : 2392.00
+tax  : 251.42
+total: 4443.52
+comments: >
+    Late afternoon is best.
+    Backup contact is Nancy
+    Billsmer @ 338-4338.
