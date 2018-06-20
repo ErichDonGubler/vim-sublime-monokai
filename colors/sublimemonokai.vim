@@ -598,7 +598,7 @@ hi! link vimEnvvar        SublimeAqua
 hi! link vimFBVar         SublimeWhite
 hi! link vimFuncName      SublimeAqua
 hi! link vimFuncNameTag   SublimeAqua
-hi! link vimFunction      SublimeGreen
+hi! link vimFunction      Tag
 hi! link vimFuncVar       SublimeContextParam
 hi! link vimHiGroup       Normal
 hi! link vimIsCommand     SublimeAqua
