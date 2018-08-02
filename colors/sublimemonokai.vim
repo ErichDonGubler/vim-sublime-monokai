@@ -268,7 +268,10 @@ hi! link cStatement        Keyword
 hi! link cStorageClass     SublimePink
 hi! link cStructure        SublimeType
 hi! link cType             SublimeType
-" FIXME: Function definitions
+" XXX: Other known deficiencies:
+" * There's no way to distinguish between function calls and
+"     definitions/declarations. :( If you prefer both to be colored, then you
+"     can use `hi! link cCustom <color>`.
 
 " CSS
 
@@ -310,6 +313,10 @@ hi! link cppSTLios       SublimeAqua
 " XXX: There may be no special highlighting here in Sublime itself
 hi! link cppSTLnamespace SublimePurple
 hi! link cppType         SublimeType
+" XXX: Other known deficiencies:
+" * There's no way to distinguish between function calls and
+"     definitions/declarations. :( If you prefer both to be colored, then you
+"     can use `hi! link cCustom <color>`.
 
 " C#
 
