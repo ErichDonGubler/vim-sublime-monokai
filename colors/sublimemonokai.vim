@@ -401,6 +401,34 @@ hi! link dotKeyword SublimeType
 " * Vim doesn't distinctly identify declarations like `digraph *blah* { ... }`.
 " * Vim doesn't have a group for escape chars (i.e., for `label` values).
 
+" Go
+
+hi! link goArgumentName      SublimeContextParam
+hi! link goDeclType          SublimeType
+hi! link goDeclaration       SublimeType
+hi! link goField             Identifier
+hi! link goFunction          Tag
+hi! link goFunctionCall      SublimeFunctionCall
+" Variation: It's not a bad idea to highlight these separately. Maybe using
+" `PreProc` and `Special` like in vanilla `vim-go` upstream isn't a bad idea.
+hi! link goGenerate          Comment
+hi! link goGenerateVariables Comment
+" Variation: It's nice to have builtins highlighted specially, though Sublime
+" doesn't do this. I would use `Special` here.
+hi! link goExtraType         Identifier
+hi! link goImport            Keyword
+hi! link goPackage           Keyword
+hi! link goReceiverVar       SublimeContextParam
+hi! link goStatement         Keyword
+hi! link goType              SublimeType
+" Variation: I like this better as `SublimeType`, since it has symmetry with
+" `goType`.
+hi! link goTypeConstructor   Identifier
+hi! link goTypeDecl          SublimeType
+hi! link goTypeName          Tag
+hi! link goVarAssign         Normal
+hi! link goVarDefs           Normal
+
 " HTML
 " This partially depends on XML -- make sure that groups in XML don't
 " adversely affect this!
@@ -413,19 +441,6 @@ hi! link htmlLink           Normal
 hi! link htmlSpecialTagName htmlTagName
 hi! link htmlSpecialChar    Special
 hi! link htmlTagName        Keyword
-
-" Go
-
-hi! link goPackage        SublimePink
-hi! link goImport         SublimePink
-hi! link goStatement      SublimePink
-hi! link goFunction       SublimeGreen
-hi! link goDeclaration    SublimeAqua
-hi! link goTypeDecl       SublimeAqua
-hi! link goDeclType       SublimeAqua
-hi! link goTypeName       SublimeGreen
-hi! link goReceiverVar    SublimeOrange
-hi! link goArgumentName   SublimeOrange
 
 " Java
 

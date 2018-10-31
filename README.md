@@ -84,8 +84,33 @@ highlighting.
 
 ### Go
 
-1. [`vim-go`](https://github.com/fatih/vim-go) for the core
-    language
+1. [`vim-go`](https://github.com/fatih/vim-go) for the core language
+
+    You will need at least the following configuration for proper color
+    support:
+
+    ```viml
+    let g:go_highlight_format_strings = 1
+    let g:go_highlight_function_arguments = 1
+    let g:go_highlight_function_calls = 1
+    let g:go_highlight_functions = 1
+    let g:go_highlight_operators = 1
+    let g:go_highlight_types = 1
+    ```
+
+    The following are also provided as options by `vim-go` and are handled
+    gracefully:
+
+    ```viml
+    let g:go_highlight_extra_types = 1
+    let g:go_highlight_fields = 1
+    let g:go_highlight_generate_tags = 1
+    let g:go_highlight_variable_assignments = 1
+    let g:go_highlight_variable_declarations = 1
+    ```
+
+    This should cover all options provided by `vim-go` pertaining to
+    highlighting. If you notice that this is out-of-date, please submit a PR!
 
 ## Screenshots
 
