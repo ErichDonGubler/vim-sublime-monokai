@@ -414,6 +414,19 @@ hi! link htmlSpecialTagName htmlTagName
 hi! link htmlSpecialChar    Special
 hi! link htmlTagName        Keyword
 
+" Go
+
+hi! link goPackage        SublimePink
+hi! link goImport         SublimePink
+hi! link goStatement      SublimePink
+hi! link goFunction       SublimeGreen
+hi! link goDeclaration    SublimeAqua
+hi! link goTypeDecl       SublimeAqua
+hi! link goDeclType       SublimeAqua
+hi! link goTypeName       SublimeGreen
+hi! link goReceiverVar    SublimeOrange
+hi! link goArgumentName   SublimeOrange
+
 " Java
 
 hi! link javaConditional      Keyword
