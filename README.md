@@ -82,8 +82,15 @@ highlighting.
 * [`cSyntaxAfter`](https://github.com/vim-scripts/cSyntaxAfter) conflicts on
     many operator groups.
 
+### Go
+
+1. [`vim-go`](https://github.com/fatih/vim-go) for the core
+    language
+
 ## Screenshots
 
 ![Javascript](screenshots/javascript.png)
+
+![Go](screenshots/go.png)
 
 ![HTML](screenshots/html.png)
