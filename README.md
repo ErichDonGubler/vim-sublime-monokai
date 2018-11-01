@@ -164,6 +164,13 @@ let java_highlight_java_lang_ids=1
     let g:php_var_selector_is_identifier = 1
     ```
 
+### TOML
+
+![TOML](screenshots/toml.png)
+
+1. [`cespare/vim-toml`](https://github.com/cespare/vim-toml) for the core
+   language
+
 ## Other Screenshots
 
 ### HTML

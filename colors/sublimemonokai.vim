@@ -773,6 +773,11 @@ hi! link TagbarVisibilityPrivate   SublimePink
 hi! link TagbarVisibilityProtected SublimeYellow
 hi! link TagbarVisibilityPublic    SublimeGreen
 
+" TOML
+
+hi! link tomlKey   Keyword
+hi! link tomlTable Tag
+
 " VimL
 
 hi! link vimCommand       Keyword
