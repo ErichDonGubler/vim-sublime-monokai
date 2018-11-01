@@ -77,6 +77,11 @@ integrates with the highlighting groups that several language-specific plugins
 specify. You will need to install these plugins in order to have Sublime-like
 highlighting.
 
+### C#
+
+1. [`OrangeT/vim-csharp`](https://github.com/OrangeT/vim-csharp) for the core
+    language
+
 ### Javascript
 
 ![Javascript](screenshots/javascript.png)
