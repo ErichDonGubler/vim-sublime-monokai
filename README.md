@@ -79,6 +79,8 @@ highlighting.
 
 ### Javascript
 
+![Javascript](screenshots/javascript.png)
+
 1. [`vim-javascript`](https://github.com/pangloss/vim-javascript) for the core
     language
 2. [`vim-javascript-lib`](https://github.com/crusoexia/vim-javascript-lib), for
@@ -91,6 +93,8 @@ highlighting.
     many operator groups.
 
 ### Go
+
+![Go](screenshots/go.png)
 
 1. [`vim-go`](https://github.com/fatih/vim-go) for the core language
 
@@ -120,10 +124,8 @@ highlighting.
     This should cover all options provided by `vim-go` pertaining to
     highlighting. If you notice that this is out-of-date, please submit a PR!
 
-## Screenshots
+## Other Screenshots
 
-![Javascript](screenshots/javascript.png)
-
-![Go](screenshots/go.png)
+### HTML
 
 ![HTML](screenshots/html.png)
