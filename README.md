@@ -34,6 +34,14 @@ syntax on
 colorscheme sublimemonokai
 ```
 
+Inside of [`sublimemonokai.vim`](./colors/sublimemonokai.vim) one will find
+notes and suggested variations from exact Sublime colors that contributors have
+found to be superior to vanilla Sublime. It is recommended that you take a look
+and see if there's anything you like! Deficiencies in syntax highlighting
+support that make it impossible to achieve parity with Sublime have also been
+noted. These are prime candidates for PRs if you find a plugin with better
+syntax highlighting groups!
+
 ## Terminal support
 
 `vim-sublime-monokai` only support 256 colours in terminal. If you are using a
