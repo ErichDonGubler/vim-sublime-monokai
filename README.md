@@ -138,6 +138,20 @@ highlighting.
     let g:php_var_selector_is_identifier = 1
     ```
 
+### Rust
+
+![Rust](screenshots/rust.png)
+
+1. [`rust-lang/rust.vim`](https://github.com/rust-lang/rust.vim) for the core
+    language
+2. [`vitalk/vim-shebang`](https://github.com/vitalk/vim-shebang) can be used
+    for correctly setting the filetype of extensionless files with shebangs for
+    [`cargo-script`]():
+
+    ```viml
+    AddShebangPattern! rust ^#!.*/bin/env\s\+run-cargo-script\>
+    ```
+
 ## Other Screenshots
 
 ### HTML
