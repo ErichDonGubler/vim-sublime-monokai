@@ -571,8 +571,8 @@ hi! link rubyRailsARMethod            SublimeOrange
 hi! link rubyRailsRenderMethod        SublimeOrange
 hi! link rubyRailsMethod              SublimeOrange
 hi! link rubyConstant                 SublimeAqua
-hi! link rubyBlockArgument            SublimeOrange
-hi! link rubyBlockParameter           SublimeOrange
+hi! link rubyBlockArgument            SublimeContextParam
+hi! link rubyBlockParameter           SublimeContextParam
 
 " Rust
 
