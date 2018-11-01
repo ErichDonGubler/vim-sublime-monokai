@@ -498,7 +498,7 @@ hi! link jsUndefined      Constant
 
 " JSON
 
-hi! link jsonKeyword Normal
+hi! link jsonKeyword Identifier
 
 " LESS
 
@@ -615,7 +615,7 @@ hi! link sassMixinName    SublimeAqua
 hi! link sassMixing       Keyword
 hi! link sassProperty     SublimeAqua
 hi! link sassSelectorOp   Operator
-hi! link sassVariable     Normal
+hi! link sassVariable     Identifier
 
 " SQL
 hi! link Quote        String
@@ -651,7 +651,7 @@ hi! link vimFuncName      SublimeAqua
 hi! link vimFuncNameTag   SublimeAqua
 hi! link vimFunction      SublimeGreen
 hi! link vimFuncVar       SublimeContextParam
-hi! link vimHiGroup       Normal
+hi! link vimHiGroup       Identifier
 hi! link vimIsCommand     SublimeAqua
 hi! link vimMapModKey     SublimeAqua
 hi! link vimMapRhs        SublimeYellow
