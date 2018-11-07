@@ -529,6 +529,17 @@ hi! link NERDTreeGitStatusModified SublimeOrange
 hi! link NERDTreeGitStatusRenamed SublimeOrange
 hi! link NERDTreeGitStatusUntracked SublimeGreen
 
+" orgmode (https://github.com/jceb/vim-orgmode)
+
+let s:orgmode_level_counter = 0
+while s:orgmode_level_counter < g:org_heading_highlight_levels
+  exec 'hi! link org_heading' . s:orgmode_level_counter . ' Tag'
+  let s:orgmode_level_counter += 1
+endwhile
+
+call s:h('org_bold', { 'format': 'bold' })
+call s:h('org_italic', { 'format': 'italic' })
+
 " Python
 
 " This configuration assumed python-mode
