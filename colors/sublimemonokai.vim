@@ -1,8 +1,3 @@
-" File:       monokai.vim
-" Maintainer: Erich Gubler (erichdongubler)
-" URL:        https://github.com/erichdongubler/vim-sublime-monokai
-" License:    MIT
-
 " Initialisation
 
 if !has('gui_running') && &t_Co < 256
