@@ -124,6 +124,20 @@ highlighting.
     This should cover all options provided by `vim-go` pertaining to
     highlighting. If you notice that this is out-of-date, please submit a PR!
 
+### PHP
+
+![PHP](screenshots/php.png)
+
+1. [`StanAngeloff/php.vim`](https://github.com/StanAngeloff/php.vim) for the
+    core language
+
+    You will need at least the following configuration for proper color
+    support:
+
+    ```viml
+    let g:php_var_selector_is_identifier = 1
+    ```
+
 ## Other Screenshots
 
 ### HTML

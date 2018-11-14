@@ -529,6 +529,45 @@ hi! link NERDTreeGitStatusModified SublimeOrange
 hi! link NERDTreeGitStatusRenamed SublimeOrange
 hi! link NERDTreeGitStatusUntracked SublimeGreen
 
+" PHP
+
+" Variation: It's actually a cool idea to style these to assist reading.
+hi! link phpClass           Tag
+call s:h('phpClassExtends', { 'fg': s:green, 'format': 'italic' })
+hi! link phpComment         Comment
+hi! link phpCommentStar     SublimeDocumentation
+hi! link phpCommentTitle    SublimeDocumentation
+hi! link phpDocComment      SublimeDocumentation
+hi! link phpDocIdentifier   SublimeDocumentation
+hi! link phpDocParam        SublimeDocumentation
+hi! link phpDocTags         Keyword
+" Variation: It'd be nice to make these a different color, but there's SO MANY
+" THINGS that this applies to!
+hi! link phpKeyword         Keyword
+" Variation: I actually like linking this against `Keyword`.
+hi! link phpMemberSelector  Identifier
+hi! link phpNullValue       Special
+hi! link phpParent          Normal
+call s:h('phpStaticClasses', { 'fg': s:aqua, 'format': 'italic' })
+" Variation: I actually like linking this against `Keyword` instead.
+hi! link phpVarSelector     Identifier
+" XXX: Other noted deficiencies:
+" * Links in doc comments are highlighted aqua in Sublime, but there's no
+"     distinguishing right now with php.vim.
+" * `phpKeyword` is used as a blanket group for several things that Sublime
+"     distinguishes right now. For example:
+"     * `echo` should be aqua
+"     * `function` should be a `SublimeType`
+"     * `return` should be a `Keyword`
+"     * `class` should be aqua and italic (maybe `SublimeType`?)
+"
+"     ... but these are all listed as a `Keyword` right now.
+" * Local args don't have their own highlighting group yet in `php.vim`
+" * Some doctags don't get highlight like in Sublime because Sublime is
+"     weirdly inconsistent with them.
+" * The PHP delimiter uses `Delimiter`, which was set to be pink for other
+"     reasons. Sublime shows them as white, though.
+
 " Python
 
 " This configuration assumed python-mode
