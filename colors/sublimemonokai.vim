@@ -446,19 +446,61 @@ hi! link htmlLink           Normal
 hi! link htmlSpecialTagName htmlTagName
 hi! link htmlSpecialChar    Special
 hi! link htmlTagName        Keyword
-
 " Java
 
+"   Common groups
+hi! link javaAssert           SublimeFunctionCall
+hi! link javaClassDecl        SublimeType
 hi! link javaConditional      Keyword
-" FIXME: Javadoc @... doesn't work?
 hi! link javaExceptions       Keyword
-hi! link javaFunction         SublimeAqua
-" FIXME: This isn't a builtin...don't other languages use italics for types?
-hi! link javaNonPrimitiveType SublimeType
 hi! link javaRepeat           Keyword
 hi! link javaSpecialChar      Special
 hi! link javaStatement        Keyword
 hi! link javaType             SublimeType
+hi! link javaTypedef          SublimeContextParam
+hi! link javaUserLabel        Normal
+hi! link javaUserLabelRef     Normal
+" XXX: Other known deficiencies:
+"
+" * There's currently no highlight group for user-defined type names. Weird.
+" * `javaClassDecl`, which is the stuff that can go around a class name in a
+"     class declaration, doesn't distinguish like Sublime does between the `class`
+"     keyword and the `extends`/`implements` keywords.
+" * There's a LOT of operators that don't have a good group. :(
+" * No nice highlight groups exist for lambdas yet. Mainline `vim` has one,
+"     but it highlights the entire span of the lambda.
+
+
+"   Mainline vim distro
+
+" Variation: I actually like keeping this a separate color -- it's kind of
+" nice.
+" XXX: Sublime distinguishes between @param names and other tags, but this
+" doesn't.
+hi! link javaCommentTitle     SublimeDocumentation
+hi! link javaDocParam         SublimeAqua
+hi! link javaDocTags          Keyword
+hi! link javaFuncDef          Tag
+hi! link javaC_JavaLang       SublimeType
+hi! link javaE_JavaLang       SublimeType
+hi! link javaR_JavaLang       SublimeType
+hi! link javaX_JavaLang       SublimeType
+hi! link javaVarArg           Keyword
+" XXX: Other known deficiencies (mainline vim):
+"
+" * javaFuncDef is way too inclusive -- even the args and its parens are
+"     highlighted!
+" * java*_JavaLang isn't really up-to-date.
+
+"   vim-java
+
+hi! link javaDeclType         SublimeType
+" XXX: Currently unable to distinguish function calls from function definitions.
+hi! link javaFunction         SublimeAqua
+hi! link javaMapType          SublimeType
+" XXX: This isn't a builtin...don't other languages use italics for types?
+hi! link javaNonPrimitiveType SublimeType
+
 call s:h('jpropertiesIdentifier', { 'fg': s:pink })
 
 " JavaScript

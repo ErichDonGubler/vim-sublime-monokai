@@ -79,6 +79,30 @@ integrates with the highlighting groups that several language-specific plugins
 specify. You will need to install these plugins in order to have Sublime-like
 highlighting.
 
+### Java
+
+There are two flavors you can pick from here -- see below sections for more
+details.
+
+#### Mainline `vim`'s Java
+
+![Mainline `vim` Java](screenshots/java-vim-mainline.png)
+
+This is the recommended option for Java. You will need at least the following
+configuration for proper color support:
+
+```viml
+let java_comment_strings=1
+let java_highlight_functions=1
+let java_highlight_java_lang_ids=1
+```
+
+#### Using `vim-java`
+
+![Using `vim-java`](screenshots/java-vim-java.png)
+
+1. [`vim-java`](https://github.com/rudes/vim-java) for the core language
+
 ### Javascript
 
 ![Javascript](screenshots/javascript.png)
