@@ -14,7 +14,7 @@ if !exists('g:sublimemonokai_gui_italic')
 endif
 
 if !exists('g:sublimemonokai_term_italic')
-    let g:sublimemonokai_term_italic = 0
+    let g:sublimemonokai_term_italic = 1
 endif
 
 let g:sublimemonokai_termcolors = 256 " does not support 16 color term right now.
@@ -78,10 +78,14 @@ endf
 
 call s:create_palette_color('brightwhite', { 'gui': '#FFFFFF', 'cterm': '231' })
 call s:create_palette_color('white',       { 'gui': '#E8E8E3', 'cterm': '252' })
-call s:create_palette_color('black',       { 'gui': '#272822', 'cterm': '234' })
+" Modified by Alessandro Martins: changed 'black' color by 'pure black'
+" call s:create_palette_color('black',       { 'gui': '#272822', 'cterm': '234' })
+call s:create_palette_color('black',       { 'gui': '#000000', 'cterm': '232' })
 call s:create_palette_color('lightblack',  { 'gui': '#2D2E27', 'cterm': '235' })
 call s:create_palette_color('lightblack2', { 'gui': '#383a3e', 'cterm': '236' })
 call s:create_palette_color('darkblack',   { 'gui': '#211F1C', 'cterm': '233' })
+" Modified by Alessandro Martins: created 'darkblack2' color
+call s:create_palette_color('darkblack2',  { 'gui': '#151515', 'cterm': '234' })
 call s:create_palette_color('grey',        { 'gui': '#8F908A', 'cterm': '243' })
 call s:create_palette_color('lightgrey',   { 'gui': '#575b61', 'cterm': '237' })
 call s:create_palette_color('darkgrey',    { 'gui': '#64645e', 'cterm': '239' })
@@ -90,6 +94,8 @@ call s:create_palette_color('warmgrey',    { 'gui': '#75715E', 'cterm': '59'  })
 call s:create_palette_color('pink',        { 'gui': '#f92772', 'cterm': '197' })
 call s:create_palette_color('green',       { 'gui': '#a6e22d', 'cterm': '148' })
 call s:create_palette_color('aqua',        { 'gui': '#66d9ef', 'cterm': '81'  })
+" Modified by Alessandro Martins: created 'skyblue' color
+call s:create_palette_color('skyblue',     { 'gui': '#5fafd7', 'cterm': '74'  })
 call s:create_palette_color('yellow',      { 'gui': '#e6db74', 'cterm': '186' })
 call s:create_palette_color('orange',      { 'gui': '#fd9720', 'cterm': '208' })
 call s:create_palette_color('purple',      { 'gui': '#ae81ff', 'cterm': '141' })
@@ -107,7 +113,7 @@ call s:create_palette_color('changebg',    { 'gui': '#5f5f87', 'cterm': '60'  })
 " link` command, and use more semantic names for the colors we want to assign
 " to groups
 
-call s:h('SublimeBrightWhite', { 'fg': s:brightwhite })
+call s:h('SublimeBrightWhite', { 'fg': s:brightwhite  })
 call s:h('SublimeWhite',       { 'fg': s:white        })
 call s:h('SublimeBlack',       { 'fg': s:black        })
 call s:h('SublimeLightBlack',  { 'fg': s:lightblack   })
@@ -126,13 +132,16 @@ call s:h('SublimeOrange',      { 'fg': s:orange       })
 call s:h('SublimePurple',      { 'fg': s:purple       })
 call s:h('SublimeRed',         { 'fg': s:red          })
 call s:h('SublimeDarkRed',     { 'fg': s:darkred      })
+" Modified by Alessandro Martins: created 'SublimeSkyBlue' highlight group
+call s:h('SublimeSkyBlue',     { 'fg': s:skyblue      })
 
 " Default highlight groups (see ':help highlight-default' or http://vimdoc.sourceforge.net/htmldoc/syntax.html#highlight-groups)
 
 call s:h('ColorColumn',  { 'bg': s:lightblack2                                             })
 hi! link Conceal SublimeLightGrey
 call s:h('CursorColumn', { 'bg': s:lightblack2                                             })
-call s:h('CursorLine',   { 'bg': s:lightblack2                                             })
+" Modified by Alessandro Martins: changed CursorLine color
+call s:h('CursorLine',   { 'bg': s:darkblack2                                              })
 call s:h('CursorLineNr', { 'fg': s:orange,      'bg': s:lightblack                         })
 call s:h('DiffAdd',      { 'fg': s:addfg,       'bg': s:addbg                              })
 call s:h('DiffChange',   { 'fg': s:changefg,    'bg': s:changebg                           })
@@ -144,11 +153,13 @@ hi! link FoldColumn SublimeDarkBlack
 call s:h('Folded',       { 'fg': s:warmgrey,    'bg': s:darkblack                          })
 call s:h('Incsearch',    {                                                                 })
 call s:h('LineNr',       { 'fg': s:grey,        'bg': s:lightblack                         })
-call s:h('MatchParen',   { 'format': 'reverse'                                             })
+" Modified by Alessandro Martins: changed MatchParen format
+call s:h('MatchParen',   { 'format': 'underline'                                           })
 hi! link ModeMsg SublimeYellow
 hi! link MoreMsg SublimeYellow
 hi! link NonText SublimeLightGrey
-call s:h('Normal',       { 'fg': s:white,       'bg': s:black                              })
+" Modified by Alessandro Martins: changed Normal color
+call s:h('Normal',       { 'fg': s:brightwhite,       'bg': s:black                        })
 call s:h('Pmenu',        { 'fg': s:lightblack,  'bg': s:white                              })
 call s:h('PmenuSbar',    {                                                                 })
 call s:h('PmenuSel',     { 'fg': s:aqua,        'bg': s:black,    'format': 'reverse,bold' })
@@ -157,11 +168,13 @@ hi! link Question SublimeYellow
 call s:h('Search',       { 'format': 'reverse,underline'                                   })
 hi! link SignColumn SublimeLightBlack
 hi! link SpecialKey SublimeLightBlack2
-call s:h('StatusLine',   { 'fg': s:warmgrey,    'bg': s:black,    'format': 'reverse'      })
-call s:h('StatusLineNC', { 'fg': s:darkgrey,    'bg': s:warmgrey, 'format': 'reverse'      })
+" Modified by Alessandro Martins: changed StatusLine. StatusLineNC and
+" TabLineSel colors, for better visualization with WinTabs
+call s:h('StatusLine',   { 'fg': s:white,       'bg': s:lightblack2,    'format': 'reverse,bold'})
+call s:h('StatusLineNC', { 'fg': s:warmgrey,    'bg': s:black,    'format': 'reverse'      })
 call s:h('TabLine',      { 'fg': s:white,       'bg': s:darkgrey                           })
 call s:h('TabLineFill',  { 'fg': s:grey,        'bg': s:darkgrey                           })
-call s:h('TabLineSel',   { 'fg': s:brightwhite, 'bg': s:white                              })
+call s:h('TabLineSel',   { 'fg': s:white,       'bg': s:black                              })
 hi! link Title SublimeYellow
 call s:h('VertSplit',    { 'fg': s:darkgrey,    'bg': s:darkblack                          })
 call s:h('Visual',       { 'bg': s:lightgrey                                               })
@@ -176,8 +189,12 @@ hi! link Character    SublimeYellow
 hi! link Number       SublimePurple
 hi! link Boolean      SublimePurple
 hi! link Float        SublimePurple
-hi! link Identifier   SublimeWhite
-hi! link Function     SublimeWhite
+
+" Modified by Alessandro Martins: changing Identifier and Function colors
+hi! link Identifier   SublimeOrange
+hi! link Function     SublimeGreen
+" End of modifications by Alessandro Martins
+
 hi! link Type         SublimeAqua
 hi! link StorageClass SublimePink
 hi! link Structure    SublimePink
@@ -190,6 +207,12 @@ hi! link Operator     SublimePink
 hi! link Keyword      SublimePink
 hi! link Exception    SublimePink
 call s:h('CommentURL',    { 'fg': s:grey, 'format': 'italic' })
+
+" Modified by Alessandro Martins: adding other generic highlight groups
+call s:h('ItalicComment', { 'fg': s:warmgrey, 'format': 'italic' })
+call s:h('MethodDecl',    { 'fg': s:purple, 'format': 'italic' })
+call s:h('BoldOperator',  { 'fg': s:aqua, 'format': 'bold' })
+" End of modifications by Alessandro Martins
 
 hi! link PreProc        SublimeGreen
 hi! link Include        SublimeWhite
@@ -205,7 +228,9 @@ hi! link SpecialComment SublimeAqua
 call s:h('Underlined',    { 'format': 'underline' })
 " call s:h('Ignore',        {})
 call s:h('Error',         { 'fg': s:red, 'bg': s:darkred })
-hi! link Todo           Comment
+
+" Modified by Alessandro Martins: changing Todo color
+hi! link Todo           SublimePurple
 
 " Some highlighting groups custom to the Sublime Monokai theme
 
@@ -444,16 +469,35 @@ hi! link htmlTagName        Keyword
 
 " Java
 
-hi! link javaConditional      Keyword
+" Modified by Alessandro Martins: adding other Java highlights
+hi! link javaExternal         Keyword
+hi! link javaConditional      Conditional
+hi! link javaBranch           Conditional
 " FIXME: Javadoc @... doesn't work?
 hi! link javaExceptions       Keyword
-hi! link javaFunction         SublimeAqua
+hi! link javaAssert           Statement
+hi! link javaFuncDef          Tag
+hi! link javaLambdaDef        Tag
+hi! link javaVarArg           Tag
+hi! link javaBraces           SublimeYellow
+hi! link javaFunction         Function
 " FIXME: This isn't a builtin...don't other languages use italics for types?
+hi! link javaType             SublimeType
 hi! link javaNonPrimitiveType SublimeType
-hi! link javaRepeat           Keyword
+hi! link javaRepeat           Repeat
 hi! link javaSpecialChar      Special
 hi! link javaStatement        Keyword
-hi! link javaType             SublimeType
+hi! link javaMethodDecl       MethodDecl 
+hi! link javaStorageClass     StorageClass
+hi! link javaClassDecl        SublimeRed
+hi! link javaAnnotation       SublimeSkyBlue
+hi! link javaComment          ItalicComment
+hi! link javaLineComment      ItalicComment
+
+
+hi! link javaOperator		  SublimeRed
+
+
 call s:h('jpropertiesIdentifier', { 'fg': s:pink })
 
 " JavaScript
@@ -571,16 +615,58 @@ hi! link phpVarSelector     Identifier
 " Python
 
 " This configuration assumed python-mode
-hi! link pythonConditional Conditional
-hi! link pythonException   Keyword
-hi! link pythonFunction    Tag
-hi! link pythonInclude     Keyword
-" XXX: def parens are, for some reason, included in this group.
-hi! link pythonParam       SublimeContextParam
-" XXX: pythonStatement covers a bit too much...unfortunately, this means that
-" some keywords, like `def`, can't be highlighted like in Sublime yet.
-hi! link pythonStatement   Keyword
-" FIXME: Python special regexp sequences aren't highlighted. :\
+hi! link pythonConditional      Conditional
+hi! link pythonException        Keyword
+hi! link pythonFunction         Function
+hi! link pythonStatement        Keyword
+hi! link pythonInclude          Keyword
+
+" Modified by Alessandro Martins: adding other Python highlights
+hi! link pythonImport           Keyword
+
+hi! link pythonRepeat		    Repeat
+hi! link pythonOperator		    SublimeRed
+hi! link pythonExtraOperator    Structure
+hi! link pythonAsync			Statement
+hi! link pythonDecorator		Define
+hi! link pythonDecoratorName	SublimeSkyBlue
+hi! link pythonLambdaExpr       Special
+hi! link pythonComment	    	ItalicComment
+hi! link pythonTodo			    Todo
+
+hi! link pythonString		    String
+hi! link pythonRawString		String
+hi! link pythonDottedName       SublimeSkyBlue
+hi! link pythonQuotes		    String
+hi! link pythonTripleQuotes		pythonQuotes
+hi! link pythonEscape		    Special
+hi! link pythonBrackets         SublimeYellow
+
+hi! link pythonBuiltin		    SublimeType
+hi! link pythonBuiltinType		SublimeType
+hi! link pythonBoolean		    SublimeType
+hi! link pythonNone 		    SublimeType
+hi! link pythonBuiltinFunc	    SublimeType
+hi! link pythonBuiltinObj       Special
+
+hi! link pythonDoctest		    Special
+hi! link pythonDoctestValue	    Define
+
+hi! link pythonError		    Error
+hi! link pythonSpaceError		Error
+hi! link pythonIndentError		Error
+hi! link pythonExceptions       Special
+hi! link pythonExClass          Special
+
+hi! link pythonParam            SublimeContextParam
+hi! link pythonParameters       SublimeContextParam
+hi! link pythonClass            SublimeRed
+hi! link pythonClassParameters  SublimeContextParam
+hi! link pythonClassVars        SublimeAqua
+hi! link pythonVars             SublimeAqua
+hi! link pythonSelf             SublimeContextParam
+hi! link pythonClassVar         SublimeContextParam
+
 
 " QuickScope plugin
 call s:h('QuickScopePrimary',   { 'bg': s:lightgrey, 'fg': s:black,     'format': 'underline' })
@@ -757,3 +843,4 @@ hi! link zshTypes    Keyword
 " * Semicolons in `if` blocks are `Keyword`ed in Sublime but not distinct in
 "     Vim
 " * Commands aren't distinct from builtins and keywords in Vim
+
