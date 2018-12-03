@@ -577,24 +577,67 @@ hi! link phpVarSelector     Identifier
 
 " Python
 
-" This configuration assumed python-mode
-hi! link pythonConditional Conditional
-hi! link pythonException   Keyword
-hi! link pythonFunction    Tag
-hi! link pythonInclude     Keyword
-" XXX: def parens are, for some reason, included in this group.
-hi! link pythonParam       SublimeContextParam
-" XXX: pythonStatement covers a bit too much...unfortunately, this means that
-" some keywords, like `def`, can't be highlighted like in Sublime yet.
-hi! link pythonStatement   Keyword
+hi! link pythonBuiltinFunc    SublimeFunctionCall
+hi! link pythonBuiltinObj     SublimeType
+hi! link pythonClass          Tag
+" I honestly prefer class args to be `Normal`, but Sublime does things this
+" way.
+" XXX: This includes the parens, but it doesn't look TOO ugly so this applied
+" by default.
+call s:h('pythonClassArg',        { 'fg': s:green, 'format': 'italic' })
+call s:h('pythonClassParameters', { 'fg': s:green, 'format': 'italic' })
+hi! link pythonClassDef       SublimeType
+hi! link pythonClassName      Tag
+hi! link pythonClassVar       SublimeContextParam
+hi! link pythonConditional    Conditional
+hi! link pythonDecorator      SublimeAqua
+hi! link pythonDecoratorName  Identifier
+" XXX: This includes too much right now, and only seems to apply to
+" attributes?
+hi! link pythonDocString      SublimeDocumentation
+hi! link pythonDottedName     SublimeAqua
+hi! link pythonExClass        SublimeType
+hi! link pythonExceptionClass SublimeType
+hi! link pythonExceptions     Special
+hi! link pythonFuncArg        SublimeContextParam
+hi! link pythonFuncDef        SublimeType
+hi! link pythonFuncName       Tag
+hi! link pythonFunction       Tag
+hi! link pythonImport         Keyword
+hi! link pythonInclude        Keyword
+hi! link pythonKeyword        Keyword
+hi! link pythonRaise          Keyword
+hi! link pythonRun            Comment
+hi! link pythonSelf           SublimeContextParam
+hi! link pythonStatement      Keyword
+hi! link pythonTripleQuotes   SublimeDocumentation
 " XXX: Other known deficiencies:
 "
-" * Python special regexp sequences aren't highlighted. :\
-" * Function cals aren't highlighted like they are in Sublime.
-" * Keyword args aren't highlighted at all like in Sublime.
+" * Function calls are given their own highlight groups right now. :(
+" * def parens are, for some reason, included in the `pythonParam` group.
+"     This is pretty ugly, so they're not orange by default. But you could
+"     just use this if you want the orange:
 "
-" Most of the above really are just because I haven't found a syntax that
-" supports these distinctions yet.
+"     ```viml
+"     hi! link pythonParam SublimeContextParam
+"     hi! link pythonParameters SublimeContextParam
+"     ```
+" * Special function names like `__init__` are aqua in Sublime, but they're
+"     not recognized as special currently. Definitely not a heartbreaker.
+" * The 'f' of f-strings in Python is given an italicized aqua color, but
+"     they're not currently recognized as their own highlight group.
+" * `print` is recognized as a statement even when in Python 3, giving it a
+"     pink color here. For Python 2 this is correct, but Vim doesn't
+"     distinguish between it and a function call.
+"
+" Other known differences from Sublime:
+"
+" * Sublime still highlights escapes in raw strings. This isn't correct, since
+"     the point of raw strings is to avoid the verbosity of escapes.
+" * Sublime doesn't recognize builtin objects like `__name__`
+" * This configuration assumes triple quotes to be documentation. It's only
+"     slightly different from the normal comment color, so that's the default
+"     here.
 
 " QuickScope plugin
 
