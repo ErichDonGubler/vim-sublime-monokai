@@ -583,6 +583,7 @@ hi! link pythonStatement   Keyword
 " FIXME: Python special regexp sequences aren't highlighted. :\
 
 " QuickScope plugin
+
 call s:h('QuickScopePrimary',   { 'bg': s:lightgrey, 'fg': s:black,     'format': 'underline' })
 call s:h('QuickScopeSecondary', { 'bg': s:black,     'fg': s:lightgrey, 'format': 'underline' })
 
