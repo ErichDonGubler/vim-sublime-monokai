@@ -474,6 +474,7 @@ call s:h('jsFuncArgRest',   { 'fg': s:purple, 'format': 'italic' })
 hi! link jsFuncArgs       SublimeContextParam
 hi! link jsFuncCall       SublimeFunctionCall
 hi! link jsFuncName       Tag
+hi! link jsFunction       SublimeType
 hi! link jsFunctionKey    Tag
 " FIXME: FutureKeys includes a bit too much. It had some type names, which should be aqua, but most of the keywords that might actually get used would be pink (keywords like public, abstract).
 hi! link jsFutureKeys     Keyword
@@ -490,7 +491,7 @@ hi! link jsRepeat         Keyword
 hi! link jsReturn         Keyword
 hi! link jsStatement      Keyword
 hi! link jsStatic         jsStorageClass
-hi! link jsStorageClass   SublimeAqua
+hi! link jsStorageClass   SublimeType
 hi! link jsSuper          SublimeContextParam
 hi! link jsThis           SublimeContextParam
 hi! link jsTry            Keyword

@@ -22,10 +22,9 @@ function test(stuff) {
 		}
 	};
 
-	var anotherThing = undefined;
+	let anotherThing = undefined;
 	var hmm = null;
 	var regex = /\x02\t(?:asdf)|wat|\bstuff+|things\23[0-9]/g;
 }
 
 export default test;
-
