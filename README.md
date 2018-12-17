@@ -1,5 +1,7 @@
 # Sublime Monokai for Vim
 
+Looking for screenshots? Scroll down to see!
+
 `vim-sublime-monokai` is a refined Monokai color scheme for `vim` tries to look
 like Sublime's default color scheme. It's derived from the work put into:
 
