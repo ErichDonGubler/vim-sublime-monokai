@@ -107,7 +107,7 @@ call s:create_palette_color('changebg',    { 'gui': '#5f5f87', 'cterm': '60'  })
 " link` command, and use more semantic names for the colors we want to assign
 " to groups
 
-call s:h('SublimeBrightWhite', { 'fg': s:brightwhite })
+call s:h('SublimeBrightWhite', { 'fg': s:brightwhite  })
 call s:h('SublimeWhite',       { 'fg': s:white        })
 call s:h('SublimeBlack',       { 'fg': s:black        })
 call s:h('SublimeLightBlack',  { 'fg': s:lightblack   })
