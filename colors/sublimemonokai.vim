@@ -161,7 +161,7 @@ call s:h('StatusLine',   { 'fg': s:warmgrey,    'bg': s:black,    'format': 'rev
 call s:h('StatusLineNC', { 'fg': s:darkgrey,    'bg': s:warmgrey, 'format': 'reverse'      })
 call s:h('TabLine',      { 'fg': s:white,       'bg': s:darkgrey                           })
 call s:h('TabLineFill',  { 'fg': s:grey,        'bg': s:darkgrey                           })
-call s:h('TabLineSel',   { 'fg': s:brightwhite, 'bg': s:white                              })
+call s:h('TabLineSel',   { 'fg': s:black,       'bg': s:white                              })
 hi! link Title SublimeYellow
 call s:h('VertSplit',    { 'fg': s:darkgrey,    'bg': s:darkblack                          })
 call s:h('Visual',       { 'bg': s:lightgrey                                               })
