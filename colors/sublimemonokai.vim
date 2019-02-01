@@ -144,7 +144,7 @@ hi! link FoldColumn SublimeDarkBlack
 call s:h('Folded',       { 'fg': s:warmgrey,    'bg': s:darkblack                          })
 call s:h('Incsearch',    {                                                                 })
 call s:h('LineNr',       { 'fg': s:grey,        'bg': s:lightblack                         })
-call s:h('MatchParen',   { 'format': 'reverse'                                             })
+call s:h('MatchParen',   { 'format': 'underline'                                           })
 hi! link ModeMsg SublimeYellow
 hi! link MoreMsg SublimeYellow
 hi! link NonText SublimeLightGrey
