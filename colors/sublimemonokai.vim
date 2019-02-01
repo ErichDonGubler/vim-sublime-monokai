@@ -641,8 +641,8 @@ hi! link rustQuestionMark   Keyword
 hi! link rustRepeat         Keyword
 hi! link rustSelf           SublimeContextParam
 " XXX: Deficiencies:
-" * In Sublime, `fn` and `let` keywords are highlighted, but Vim lumps them
-"     with all other keywords
+" * In Sublime, `fn` and `let` keywords are highlighted with italicized aqua,
+"     but Vim lumps them with all other keywords
 " * Crate names after `extern crate` are included in `rustIdentifier`, which
 "     is technically more inclusive than Sublime's definition group but not so
 "     bad I don't think it's an okay default.
