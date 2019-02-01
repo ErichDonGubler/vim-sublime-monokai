@@ -226,7 +226,8 @@ hi! link shLoop        Keyword
 hi! link shQuote       String
 hi! link shSet         Keyword
 hi! link shStatement   SublimePink
-" XXX: Other noted deficiencies
+" XXX: Other known deficiencies:
+"
 " * Can't highlight POSIX builtins right because shStatement is later in the
 "     highlight stack
 " * Can't override shOption to be "normal" because it could be within a string
@@ -269,6 +270,7 @@ hi! link cStorageClass     SublimePink
 hi! link cStructure        SublimeType
 hi! link cType             SublimeType
 " XXX: Other known deficiencies:
+"
 " * There's no way to distinguish between function calls and
 "     definitions/declarations. :( If you prefer both to be colored, then you
 "     can use `hi! link cCustom <color>`.
@@ -314,6 +316,7 @@ hi! link cppSTLios       SublimeAqua
 hi! link cppSTLnamespace SublimePurple
 hi! link cppType         SublimeType
 " XXX: Other known deficiencies:
+"
 " * There's no way to distinguish between function calls and
 "     definitions/declarations. :( If you prefer both to be colored, then you
 "     can use `hi! link cCustom <color>`.
@@ -330,7 +333,8 @@ hi! link csType                 SublimeType
 hi! link csUnspecifiedStatement Keyword
 hi! link csXmlTag               xmlTagName
 hi! link csXmlComment           SublimeDocumentation
-" XXX: Other noted deficiencies:
+" XXX: Other known deficiencies:
+"
 " *  Need some local links for XML getting set to the right color
 " *  Operators aren't red in Vim, but are in Sublime.
 " *  Function arguments aren't distinguished with their own highlight group
@@ -393,7 +397,8 @@ hi! link dotBrackEncl Normal
 " definitions.
 hi! link dotKeyChar Keyword
 hi! link dotKeyword SublimeType
-" XXX: Other noted deficiencies:
+" XXX: Other known deficiencies:
+"
 " * `graph` keyword isn't correctly classified into a keyword, Sublime does.
 "     This can be fixed with `syn keyword dotKeyword graph`.
 " * Neither Sublime nor Vim highlight `--` in undirected graphs.
@@ -552,7 +557,8 @@ hi! link phpParent          Normal
 call s:h('phpStaticClasses', { 'fg': s:aqua, 'format': 'italic' })
 " Variation: I actually like linking this against `Keyword` instead.
 hi! link phpVarSelector     Identifier
-" XXX: Other noted deficiencies:
+" XXX: Other known deficiencies:
+"
 " * Links in doc comments are highlighted aqua in Sublime, but there's no
 "     distinguishing right now with php.vim.
 " * `phpKeyword` is used as a blanket group for several things that Sublime
@@ -581,7 +587,8 @@ hi! link pythonParam       SublimeContextParam
 " XXX: pythonStatement covers a bit too much...unfortunately, this means that
 " some keywords, like `def`, can't be highlighted like in Sublime yet.
 hi! link pythonStatement   Keyword
-" XXX: Other noted deficiencies:
+" XXX: Other known deficiencies:
+"
 " * Python special regexp sequences aren't highlighted. :\
 " * Function cals aren't highlighted like they are in Sublime.
 " * Keyword args aren't highlighted at all like in Sublime.
@@ -640,7 +647,8 @@ hi! link rustModPathSep     Normal
 hi! link rustQuestionMark   Keyword
 hi! link rustRepeat         Keyword
 hi! link rustSelf           SublimeContextParam
-" XXX: Deficiencies:
+" XXX: Other known deficiencies:
+"
 " * In Sublime, `fn` and `let` keywords are highlighted with italicized aqua,
 "     but Vim lumps them with all other keywords
 " * Crate names after `extern crate` are included in `rustIdentifier`, which
@@ -731,7 +739,8 @@ hi! link yamlFlowIndicator            Normal
 hi! link yamlFlowMappingKey           Keyword
 hi! link yamlKeyValueDelimiter        Normal
 hi! link yamlPlainScalar              String
-" XXX: Other noted deficiencies:
+" XXX: Other known deficiencies:
+"
 " A good place to see these in action is: http://www.yaml.org/start.html
 " * "yes"/"no" values are actually not recognized as yamlBool groups in Vim.
 " * Literal/folded block scalars don't have their own group right now in Vim.
@@ -739,7 +748,9 @@ hi! link yamlPlainScalar              String
 "     scalars in Vim.
 " * References aren't handled at all by Vim, it seems.
 " * Vim incorrectly highlights for comments after a scalar value has started.
+"
 " Other noted deficiencies when using YAML to manually analyze binary files:
+"
 " * Hex literals as map keys are highlighted in Sublime, not in Vim.
 " * Sublime is more permissive about what it highlights for keys, but Sublime
 "     may reject them as invalid; i.e., "???" (minus quotes)
@@ -760,8 +771,8 @@ hi! link zshQuoted   Special
 hi! link zshSubst    String
 " Variation: I actually like keeping this as Type.
 hi! link zshTypes    Keyword
-" Other variations:
-" XXX: Other noted deficiencies:
+" XXX: Other known deficiencies:
+"
 " * Semicolons in `if` blocks are `Keyword`ed in Sublime but not distinct in
 "     Vim
 " * Commands aren't distinct from builtins and keywords in Vim
