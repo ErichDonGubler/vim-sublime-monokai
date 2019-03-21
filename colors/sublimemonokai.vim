@@ -716,6 +716,7 @@ hi! link sassSelectorOp   Operator
 hi! link sassVariable     Identifier
 
 " SQL
+
 hi! link Quote        String
 hi! link sqlFunction  SublimeFunctionCall
 hi! link sqlKeyword   Keyword
