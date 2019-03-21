@@ -715,6 +715,40 @@ hi! link sassProperty     SublimeAqua
 hi! link sassSelectorOp   Operator
 hi! link sassVariable     Identifier
 
+" Scala
+" XXX: This highlights the arroba (`@`) of the annotation too, but Sublime
+" distinguishes the arroba with pink.
+hi! link scalaAnnotation             SublimeAqua
+hi! link scalaCapitalWord            SublimeAqua
+hi! link scalaCaseFollowing          SublimeContextParam
+hi! link scalaEscapedChar            Special
+hi! link scalaExternal               Keyword
+hi! link scalaInstanceDeclaration    Tag
+" XXX: This is a bit too inclusive compared to Sublime, since it also
+" highlights the quotes themselves.
+hi! link scalaInterpolationBrackets  SublimeAqua
+hi! link scalaKeywordModifier        Keyword
+" Variation: I actually prefer these to be `Normal`.
+hi! link scalaNameDefinition         Tag
+" TODO: Is this too inclusive?
+hi! link scalaSpecial                Keyword
+hi! link scalaSquareBracketsBrackets Normal
+" Variation: This isn't perfect, because it encompasses brackets right now.
+hi! link scalaTypeDeclaration        SublimeType
+" XXX: Other known deficiencies:
+"
+" * `scalaCapitalWord` is a silly notion. That is all.
+" * `scalaNumber` seems more inclusive (erroneously, from what I can tell)
+"     than Sublime's number highlights.
+" * Function and lambda params don't have a highlight group in vanilla Vim.
+"    :(
+" * Sublime distinguishes between groups of keywords, i.e., `case class`, from
+"     things like `extends`. Vim's vanilla syntax currently doesn't.
+" * Sublime highlights some operators pink and others it doesn't, i.e., it
+"     DOES do `=` but not parents, brackets
+" * Interestingly, arrow notation is highlighted differently for between case
+"     matches (pink) and lambdas (blue).
+
 " SQL
 
 hi! link Quote        String
