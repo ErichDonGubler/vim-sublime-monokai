@@ -142,7 +142,7 @@ hi! link Directory SublimeAqua
 call s:h('ErrorMsg',     { 'fg': s:black,       'bg': s:red,      'format': 'standout'     })
 hi! link FoldColumn SublimeDarkBlack
 call s:h('Folded',       { 'fg': s:warmgrey,    'bg': s:darkblack                          })
-call s:h('IncSearch',    {                                                                 })
+call s:h('IncSearch',    { 'format': 'reverse,underline'                                   })
 call s:h('LineNr',       { 'fg': s:grey,        'bg': s:lightblack                         })
 call s:h('MatchParen',   { 'format': 'underline'                                           })
 hi! link ModeMsg SublimeYellow
