@@ -450,10 +450,12 @@ hi! link htmlTagName        Keyword
 " Java
 
 "   Common groups
+hi! link javaAnnotation       SublimeAqua
 hi! link javaAssert           SublimeFunctionCall
 hi! link javaClassDecl        SublimeType
 hi! link javaConditional      Keyword
 hi! link javaExceptions       Keyword
+hi! link javaExternal         Keyword
 hi! link javaRepeat           Keyword
 hi! link javaSpecialChar      Special
 hi! link javaStatement        Keyword
