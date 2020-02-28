@@ -91,6 +91,7 @@ call s:create_palette_color('pink',        { 'gui': '#f92772', 'cterm': '197' })
 call s:create_palette_color('green',       { 'gui': '#a6e22d', 'cterm': '148' })
 call s:create_palette_color('aqua',        { 'gui': '#66d9ef', 'cterm': '81'  })
 call s:create_palette_color('yellow',      { 'gui': '#e6db74', 'cterm': '186' })
+call s:create_palette_color('darkyellow',  { 'gui': '#878700', 'cterm': '100' })
 call s:create_palette_color('orange',      { 'gui': '#fd9720', 'cterm': '208' })
 call s:create_palette_color('purple',      { 'gui': '#ae81ff', 'cterm': '141' })
 call s:create_palette_color('red',         { 'gui': '#e73c50', 'cterm': '196' })
@@ -157,6 +158,10 @@ hi! link Question SublimeYellow
 call s:h('Search',       { 'format': 'reverse,underline'                                   })
 hi! link SignColumn SublimeLightBlack
 hi! link SpecialKey SublimeLightBlack2
+call s:h('SpellBad',     {                      'bg': s:darkred                            })
+call s:h('SpellCap',     {                      'bg': s:darkyellow                         })
+call s:h('SpellLocal',   {                      'bg': s:darkyellow                         })
+call s:h('SpellRare',    {                      'bg': s:darkyellow                         })
 call s:h('StatusLine',   { 'fg': s:warmgrey,    'bg': s:black,    'format': 'reverse'      })
 call s:h('StatusLineNC', { 'fg': s:darkgrey,    'bg': s:warmgrey, 'format': 'reverse'      })
 call s:h('TabLine',      { 'fg': s:white,       'bg': s:darkgrey                           })
