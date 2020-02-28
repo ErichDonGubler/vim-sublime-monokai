@@ -932,6 +932,9 @@ hi! link rustSelf           SublimeContextParam
 "     a really nice feature.
 " * No `fn`/lambda param highlighting is available in Vim like in Sublime
 "     here. :(
+" * `rust.vim` doesn't highlight typical attributes like in Sublime. Sublime
+"     makes this fairly nice, though I prefer to just make them look like doc
+"     comments.
 
 " SASS
 
