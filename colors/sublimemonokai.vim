@@ -1007,6 +1007,37 @@ hi! link TagbarVisibilityPrivate   SublimePink
 hi! link TagbarVisibilityProtected SublimeYellow
 hi! link TagbarVisibilityPublic    SublimeGreen
 
+" TypeScript
+
+" Why is this `Keyword` by default? Who knows?
+hi! link typescriptEndColons              Normal
+" XXX: This is too inclusive -- I expected this to just be the types, but it
+" includes the `throw` keyword too.
+hi! link typescriptExceptions             SublimeType
+hi! link typescriptFuncKeyword            SublimeType
+hi! link typescriptIdentifier             SublimeContextParam
+" Variation: I far prefer to let this be `Normal`...
+hi! link typescriptInterpolation          String
+" ...and have this be `Special`.
+hi! link typescriptInterpolationDelimiter String
+hi! link typescriptLogicSymbols           Keyword
+" Why is this `Keyword` by default? Who knows?
+hi! link typescriptParens                 Normal
+" Variation: I prefer to make this `Special.`, since I use the value way more
+" than `null` as a type. Sublime distinguishes, it'd be nice if we could too.
+hi! link typescriptNull                   Special
+hi! link typescriptStatement              Keyword
+hi! link typescriptType                   SublimeType
+
+" XXX: Other deficiencies:
+" * `typescriptReserved` doesn't allow some distinctions Sublime does:
+"     * globs in imports
+"     * `Tag` for things that are definitely declarations/definitions
+"     * Browser context params like `console`
+"     * Common functions like `console.debug`; I actually don't care about
+"         these, but Sublime does.
+"     * `is` keyword
+
 " VimL
 
 hi! link vimCommand       Keyword
