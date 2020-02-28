@@ -855,6 +855,7 @@ hi! link pythonConditional Conditional
 hi! link pythonException   Keyword
 hi! link pythonFunction    Tag
 hi! link pythonInclude     Keyword
+hi! link pythonLambdaExpr  SublimeType
 " XXX: def parens are, for some reason, included in this group.
 hi! link pythonParam       SublimeContextParam
 " XXX: pythonStatement covers a bit too much...unfortunately, this means that
