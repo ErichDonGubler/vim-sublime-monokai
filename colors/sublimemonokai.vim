@@ -928,8 +928,8 @@ hi! link rustSelf           SublimeContextParam
 " * Crate names after `extern crate` are included in `rustIdentifier`, which
 "     is technically more inclusive than Sublime's definition group but not so
 "     bad I don't think it's an okay default.
-" * Sublime does NOT have the `rustEnumVariants` distinction, which is
-"     actually a really nice feature.
+" * Sublime does NOT have the `rustEnumVariant` distinction, which is actually
+"     a really nice feature.
 " * No `fn`/lambda param highlighting is available in Vim like in Sublime
 "     here. :(
 
