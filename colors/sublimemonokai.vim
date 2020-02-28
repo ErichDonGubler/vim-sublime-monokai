@@ -850,6 +850,7 @@ hi! link phpVarSelector     Identifier
 " Python
 
 " This configuration assumed python-mode
+hi! link pythonBuiltinFunc SublimeFunctionCall
 hi! link pythonConditional Conditional
 hi! link pythonException   Keyword
 hi! link pythonFunction    Tag
