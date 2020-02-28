@@ -10,11 +10,11 @@ if !has('gui_running') && &t_Co < 256
 endif
 
 if !exists('g:sublimemonokai_gui_italic')
-    let g:sublimemonokai_gui_italic = 1
+  let g:sublimemonokai_gui_italic = 1
 endif
 
 if !exists('g:sublimemonokai_term_italic')
-    let g:sublimemonokai_term_italic = 0
+  let g:sublimemonokai_term_italic = 0
 endif
 
 let g:sublimemonokai_termcolors = 256 " does not support 16 color term right now.
@@ -32,39 +32,39 @@ fun! s:h(group, style)
   let s:ctermformat = 'NONE'
   let s:guiformat = 'NONE'
   if has_key(a:style, 'format')
-    let s:ctermformat = a:style.format
-    let s:guiformat = a:style.format
+	let s:ctermformat = a:style.format
+	let s:guiformat = a:style.format
   endif
   if g:sublimemonokai_term_italic == 0
-    let s:ctermformat = substitute(s:ctermformat, ',italic', '', '')
-    let s:ctermformat = substitute(s:ctermformat, 'italic,', '', '')
-    let s:ctermformat = substitute(s:ctermformat, 'italic', '', '')
+	let s:ctermformat = substitute(s:ctermformat, ',italic', '', '')
+	let s:ctermformat = substitute(s:ctermformat, 'italic,', '', '')
+	let s:ctermformat = substitute(s:ctermformat, 'italic', '', '')
   endif
   if g:sublimemonokai_gui_italic == 0
-    let s:guiformat = substitute(s:guiformat, ',italic', '', '')
-    let s:guiformat = substitute(s:guiformat, 'italic,', '', '')
-    let s:guiformat = substitute(s:guiformat, 'italic', '', '')
+	let s:guiformat = substitute(s:guiformat, ',italic', '', '')
+	let s:guiformat = substitute(s:guiformat, 'italic,', '', '')
+	let s:guiformat = substitute(s:guiformat, 'italic', '', '')
   endif
   if g:sublimemonokai_termcolors == 16
-    let l:ctermfg = (has_key(a:style, 'fg') ? a:style.fg.cterm16 : 'NONE')
-    let l:ctermbg = (has_key(a:style, 'bg') ? a:style.bg.cterm16 : 'NONE')
+	let l:ctermfg = (has_key(a:style, 'fg') ? a:style.fg.cterm16 : 'NONE')
+	let l:ctermbg = (has_key(a:style, 'bg') ? a:style.bg.cterm16 : 'NONE')
   else
-    let l:ctermfg = (has_key(a:style, 'fg') ? a:style.fg.cterm : 'NONE')
-    let l:ctermbg = (has_key(a:style, 'bg') ? a:style.bg.cterm : 'NONE')
+	let l:ctermfg = (has_key(a:style, 'fg') ? a:style.fg.cterm : 'NONE')
+	let l:ctermbg = (has_key(a:style, 'bg') ? a:style.bg.cterm : 'NONE')
   end
   execute 'highlight' a:group
-    \ 'guifg='   (has_key(a:style, 'fg')      ? a:style.fg.gui   : 'NONE')
-    \ 'guibg='   (has_key(a:style, 'bg')      ? a:style.bg.gui   : 'NONE')
-    \ 'guisp='   (has_key(a:style, 'sp')      ? a:style.sp.gui   : 'NONE')
-    \ 'gui='     (!empty(s:guiformat) ? s:guiformat   : 'NONE')
-    \ 'ctermfg=' . l:ctermfg
-    \ 'ctermbg=' . l:ctermbg
-    \ 'cterm='   (!empty(s:ctermformat) ? s:ctermformat   : 'NONE')
+		\ 'guifg='   (has_key(a:style, 'fg')      ? a:style.fg.gui   : 'NONE')
+		\ 'guibg='   (has_key(a:style, 'bg')      ? a:style.bg.gui   : 'NONE')
+		\ 'guisp='   (has_key(a:style, 'sp')      ? a:style.sp.gui   : 'NONE')
+		\ 'gui='     (!empty(s:guiformat) ? s:guiformat   : 'NONE')
+		\ 'ctermfg=' . l:ctermfg
+		\ 'ctermbg=' . l:ctermbg
+		\ 'cterm='   (!empty(s:ctermformat) ? s:ctermformat   : 'NONE')
 endfunction
 
 " Expose the more complicated style setting via a global function
 fun! g:SublimeMonokaiHighlight(group, style)
-	return s:h(a:group, a:style)
+  return s:h(a:group, a:style)
 endfun
 
 " Palette
@@ -72,8 +72,8 @@ endfun
 " Convenience function to have a convenient script variable name and an
 " namespaced global variable
 fun! s:create_palette_color(color_name, color_data)
-	exec 'let s:' . a:color_name . ' = a:color_data'
-	exec 'let g:sublimemonokai_' . a:color_name . ' = a:color_data'
+  exec 'let s:' . a:color_name . ' = a:color_data'
+  exec 'let g:sublimemonokai_' . a:color_name . ' = a:color_data'
 endf
 
 call s:create_palette_color('brightwhite', { 'gui': '#FFFFFF', 'cterm': '231' })
