@@ -157,7 +157,7 @@ call s:h('PmenuThumb',   { 'fg': s:lightblack,  'bg': s:grey                    
 hi! link Question SublimeYellow
 call s:h('Search',       {                                        'format': 'reverse,underline'})
 call s:h('SignColumn',   { 'fg': s:lightblack,  'bg': s:grey                                   })
-hi! link SpecialKey SublimeLightBlack2
+hi! link SpecialKey SublimePurple
 call s:h('SpellBad',     {                      'bg': s:darkred                                })
 call s:h('SpellCap',     {                      'bg': s:darkyellow                             })
 call s:h('SpellLocal',   {                      'bg': s:darkyellow                             })
@@ -784,8 +784,32 @@ hi! link lessVariable Tag
 
 " Makefile
 
-hi! link makeCommands    Normal
-hi! link makeCmdNextLine Normal
+" Revised from vim82/syntax/make.vim
+hi! link makeNextLine       makeSpecial
+hi! link makeCmdNextLine    makeSpecial
+hi! link makeOverride       makeStatement
+hi! link makeExport         makeStatement
+
+hi! link makeSpecTarget     Statement
+if !exists("make_no_commands")
+hi! link makeCommands       Number
+endif
+hi! link makeImplicit       Function
+hi! link makeTarget         SublimeGreen
+hi! link makeInclude        SublimePink
+hi! link makePreCondit      SublimePink
+hi! link makeStatement      SublimeAqua
+hi! link makeIdent          Identifier
+hi! link makeSpecial        Special
+hi! link makeComment        Comment
+hi! link makeDString        String
+hi! link makeSString        String
+hi! link makeBString        String
+hi! link makeError          Error
+hi! link makeTodo           Todo
+hi! link makeDefine         Define
+hi! link makeCommandErrorl  Error
+hi! link makeConfig         PreCondit
 
 " NERDTree
 
