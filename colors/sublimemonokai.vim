@@ -784,8 +784,32 @@ hi! link lessVariable Tag
 
 " Makefile
 
-hi! link makeCommands    Normal
-hi! link makeCmdNextLine Normal
+" Revised from vim82/syntax/make.vim
+hi! link makeNextLine       makeSpecial
+hi! link makeCmdNextLine    makeSpecial
+hi! link makeOverride       makeStatement
+hi! link makeExport         makeStatement
+
+hi! link makeSpecTarget     Statement
+if !exists("make_no_commands")
+hi! link makeCommands       Number
+endif
+hi! link makeImplicit       Function
+hi! link makeTarget         SublimeGreen
+hi! link makeInclude        SublimePink
+hi! link makePreCondit      SublimePink
+hi! link makeStatement      SublimeAqua
+hi! link makeIdent          Identifier
+hi! link makeSpecial        Special
+hi! link makeComment        Comment
+hi! link makeDString        String
+hi! link makeSString        String
+hi! link makeBString        String
+hi! link makeError          Error
+hi! link makeTodo           Todo
+hi! link makeDefine         Define
+hi! link makeCommandErrorl  Error
+hi! link makeConfig         PreCondit
 
 " NERDTree
 
