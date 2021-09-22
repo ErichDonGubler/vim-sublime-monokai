@@ -150,6 +150,9 @@ hi! link ModeMsg SublimeYellow
 hi! link MoreMsg SublimeYellow
 hi! link NonText SublimeLightGrey
 call s:h('Normal',       { 'fg': s:white,       'bg': s:black                                  })
+if has('nvim')
+  call s:h('NormalFloat',{ 'fg': s:white,       'bg': s:warmgrey                               })
+end
 call s:h('Pmenu',        { 'fg': s:lightblack,  'bg': s:white                                  })
 call s:h('PmenuSbar',    {                                                                     })
 call s:h('PmenuSel',     { 'fg': s:aqua,        'bg': s:black,    'format': 'reverse,bold'     })
