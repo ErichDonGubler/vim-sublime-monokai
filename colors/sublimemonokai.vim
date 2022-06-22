@@ -227,6 +227,14 @@ hi! link SublimeDocumentation SublimeGrey
 hi! link SublimeFunctionCall SublimeAqua
 hi! link SublimeUserAttribute SublimeGrey
 
+" Neovim LSP support
+
+if has('nvim')
+  call s:h('LspReferenceText',  { 'bg': s:darkgrey })
+  call s:h('LspReferenceRead',  { 'bg': s:addbg })
+  call s:h('LspReferenceWrite', { 'bg': s:changebg })
+endif
+
 " Bash/POSIX shell
 
 hi! link shConditional Conditional
