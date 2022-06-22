@@ -6,6 +6,10 @@
 " Initialisation
 
 if !has('gui_running') && &t_Co < 256
+  " Shim this out so code doesn't hard break -- users should notice if this
+  " doesn't work.
+  fun! g:SublimeMonokaiHighlight(group, style)
+  endf
   finish
 endif
 
