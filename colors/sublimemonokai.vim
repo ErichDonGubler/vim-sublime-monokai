@@ -233,6 +233,14 @@ if has('nvim')
   call s:h('LspReferenceText',  { 'bg': s:darkgrey })
   call s:h('LspReferenceRead',  { 'bg': s:addbg })
   call s:h('LspReferenceWrite', { 'bg': s:changebg })
+
+	" TODO: WIP. I haven't tried to get parity with NERDTree yet.
+	hi! link NvimTreeFolderIcon Comment
+	hi! link NvimTreeGitDeleted SublimeRed
+	hi! link NvimTreeGitDirty   SublimeYellow
+	hi! link NvimTreeGitMerge   SublimePink
+	hi! link NvimTreeGitRenamed SublimeOrange
+	hi! link NvimTreeGitStaged  SublimeGreen
 endif
 
 " Bash/POSIX shell
