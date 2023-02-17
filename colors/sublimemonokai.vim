@@ -872,23 +872,40 @@ hi! link phpVarSelector     Identifier
 
 " Python
 
-" This configuration assumed python-mode
-hi! link pythonBuiltinFunc SublimeFunctionCall
-hi! link pythonConditional Conditional
-hi! link pythonException   Keyword
-hi! link pythonFunction    Tag
-hi! link pythonInclude     Keyword
-hi! link pythonLambdaExpr  SublimeType
+" This configuration assumed `python-syntax`
+hi! link pythonBoolean            Special
+hi! link pythonBuiltinFunc        SublimeFunctionCall
+hi! link pythonBuiltinType        SublimeType
+" XXX: `__name__` (and maybe others?) get classified into this group, and aren't
+" highlighted in vanilla Sublime.
+hi! link pythonBuiltinObj         Special
+" XXX: `mcs` isn't highlighted by Sublime ATOW, but it should be.
+hi! link pythonClass              SublimeGreen
+hi! link pythonClassVar           SublimeContextParam
+hi! link pythonCoding             Comment
+hi! link pythonConditional        Conditional
+hi! link pythonException          Keyword
+hi! link pythonExClass            SublimeType
+hi! link pythonFunction           Tag
+hi! link pythonImport             Keyword
+hi! link pythonInclude            Keyword
+hi! link pythonLambdaExpr         SublimeType
+hi! link pythonNone               Special
 " XXX: def parens are, for some reason, included in this group.
-hi! link pythonParam       SublimeContextParam
+hi! link pythonParam              SublimeContextParam
+hi! link pythonRaiseFromStatement Keyword
+hi! link pythonSingleton          Special
 " XXX: pythonStatement covers a bit too much...unfortunately, this means that
 " some keywords, like `def`, can't be highlighted like in Sublime yet.
-hi! link pythonStatement   Keyword
+hi! link pythonStatement          Keyword
+hi! link pythonStrFormat          Special
+hi! link pythonRun                Comment
 " XXX: Other known deficiencies:
 "
 " * Python special regexp sequences aren't highlighted. :\
-" * Function cals aren't highlighted like they are in Sublime.
-" * Keyword args aren't highlighted at all like in Sublime.
+" * Function calls aren't highlighted like they are in Sublime.
+" * Non-special args aren't highlighted at all like in Sublime.
+" * `b` prefixes for strings aren't highlighted separately like in Sublime.
 "
 " Most of the above really are just because I haven't found a syntax that
 " supports these distinctions yet.

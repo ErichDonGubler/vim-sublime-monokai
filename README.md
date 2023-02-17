@@ -164,6 +164,18 @@ let java_highlight_java_lang_ids=1
     let g:php_var_selector_is_identifier = 1
     ```
 
+### Python
+
+1. [`python-syntax`](https://github.com/vim-python/python-syntax) for the core
+    language
+
+    You will need at least the following configuration for proper color
+    support:
+
+    ```viml
+    let g:python_highlight_all = 1
+    ```
+
 ## Other Screenshots
 
 ### HTML
