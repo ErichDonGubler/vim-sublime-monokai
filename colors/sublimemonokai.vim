@@ -895,6 +895,7 @@ hi! link pythonNone               Special
 hi! link pythonParam              SublimeContextParam
 hi! link pythonRaiseFromStatement Keyword
 hi! link pythonSingleton          Special
+hi! link pythonSelf               SublimeContextParam
 " XXX: pythonStatement covers a bit too much...unfortunately, this means that
 " some keywords, like `def`, can't be highlighted like in Sublime yet.
 hi! link pythonStatement          Keyword
