@@ -243,6 +243,12 @@ if has('nvim')
 	hi! link NvimTreeGitStaged  SublimeGreen
 endif
 
+" Neovim support for the Lazy package manager
+
+if has('nvim')
+	hi! link LazyProp SublimeAqua
+endif
+
 " Bash/POSIX shell
 
 hi! link shConditional Conditional
