@@ -249,10 +249,18 @@ if has('nvim')
 	hi! link LazyProp SublimeAqua
 endif
 
+" Neovim support for [`barbar.nvim`]
+"
+"[`barbar.nvim`]: https://github.com/romgrk/barbar.nvim
+
+if has('nvim')
+	hi! link BufferCurrentMod SublimeAqua
+endif
+
 " Bash/POSIX shell
 
 hi! link shConditional Conditional
-hi! link shDerefOff    Normal
+hi! link shDerefOff    SublimeWhite
 hi! link shDerefSimple SublimeAqua
 hi! link shDerefVar    SublimeAqua
 hi! link shFunctionKey SublimePink
@@ -273,10 +281,10 @@ hi! link shStatement   SublimePink
 " Batch
 
 hi! link dosbatchImplicit    Keyword
-hi! link dosbatchLabel       Normal
+hi! link dosbatchLabel       SublimeWhite
 " FIXME: This should have its own group, like SublimeEscapedSequence
 hi! link dosbatchSpecialChar SublimePurple
-hi! link dosbatchSwitch      Normal
+hi! link dosbatchSwitch      SublimeWhite
 " FIXME: Variables don't have their own highlighting in Sublime
 " hi! link dosbatchVariable    SublimeAqua
 " XXX: string highlight is used for echo commands, but Sublime doesn't
@@ -315,7 +323,7 @@ hi! link cmakeCommand                            SublimeAqua
 hi! link cmakeKWfind_package                     SublimeContextParam
 hi! link cmakeKWproject                          SublimeContextParam
 " XXX: Variation: I actually really like making this aqua.
-hi! link cmakeVariableValue                      Normal
+hi! link cmakeVariableValue                      SublimeWhite
 
 " pboettch/vim-cmake-syntax plugin
 hi! link cmakeBracketArgument                           SublimeAqua
@@ -538,8 +546,8 @@ hi! link cssAttributeSelector Tag
 " XXX: Not sure about this one; it has issues with the following:
 "   - calc
 "   - colors
-hi! link cssAttrRegion      Normal
-hi! link cssBraces          Normal
+hi! link cssAttrRegion      SublimeWhite
+hi! link cssBraces          SublimeWhite
 hi! link cssClassName       Tag
 hi! link cssColor           Constant
 hi! link cssFunctionName    SublimeFunctionCall
@@ -547,8 +555,8 @@ hi! link cssIdentifier      Tag
 hi! link cssPositioningAttr SublimeAqua
 hi! link cssProp            SublimeAqua
 " XXX: Variation: might be better as pink, actually
-hi! link cssPseudoClassId   Normal
-hi! link cssSelectorOp      Normal
+hi! link cssPseudoClassId   SublimeWhite
+hi! link cssSelectorOp      SublimeWhite
 hi! link cssStyle           cssAttr
 hi! link cssTagName         Keyword
 " TODO: Find a way to distinguish unit decorators from color hash
@@ -647,8 +655,8 @@ hi! link GitGutterChangeDelete SublimeOrange
 " GraphViz
 " Variation: I actually like to keep these as Keyword, but Sublime does this
 " differently.
-hi! link dotBraceEncl Normal
-hi! link dotBrackEncl Normal
+hi! link dotBraceEncl SublimeWhite
+hi! link dotBrackEncl SublimeWhite
 " XXX: This colors way more stuff than Sublime does, but otherwise we'd miss
 " out on operator highlights like with equals signs in attribute value
 " definitions.
@@ -688,8 +696,8 @@ hi! link goType              SublimeType
 hi! link goTypeConstructor   Identifier
 hi! link goTypeDecl          SublimeType
 hi! link goTypeName          Tag
-hi! link goVarAssign         Normal
-hi! link goVarDefs           Normal
+hi! link goVarAssign         SublimeWhite
+hi! link goVarDefs           SublimeWhite
 
 " HTML
 " This partially depends on XML -- make sure that groups in XML don't
@@ -699,7 +707,7 @@ hi! link goVarDefs           Normal
 " FIXME: For some reason this is excluding a "key" attribute
 hi! link htmlArg            Tag
 " Variation: This is an interesting idea for
-hi! link htmlLink           Normal
+hi! link htmlLink           SublimeWhite
 hi! link htmlSpecialTagName htmlTagName
 hi! link htmlSpecialChar    Special
 hi! link htmlTagName        Keyword
@@ -718,8 +726,8 @@ hi! link javaSpecialChar      Special
 hi! link javaStatement        Keyword
 hi! link javaType             SublimeType
 hi! link javaTypedef          SublimeContextParam
-hi! link javaUserLabel        Normal
-hi! link javaUserLabelRef     Normal
+hi! link javaUserLabel        SublimeWhite
+hi! link javaUserLabelRef     SublimeWhite
 " XXX: Other known deficiencies:
 "
 " * There's currently no highlight group for user-defined type names. Weird.
@@ -814,8 +822,8 @@ hi! link lessVariable Tag
 
 " Makefile
 
-hi! link makeCommands    Normal
-hi! link makeCmdNextLine Normal
+hi! link makeCommands    SublimeWhite
+hi! link makeCmdNextLine SublimeWhite
 
 " NERDTree
 
@@ -855,7 +863,7 @@ hi! link phpKeyword         Keyword
 " Variation: I actually like linking this against `Keyword`.
 hi! link phpMemberSelector  Identifier
 hi! link phpNullValue       Special
-hi! link phpParent          Normal
+hi! link phpParent          SublimeWhite
 call s:h('phpStaticClasses', { 'fg': s:aqua, 'format': 'italic' })
 " Variation: I actually like linking this against `Keyword` instead.
 hi! link phpVarSelector     Identifier
@@ -965,7 +973,7 @@ hi! link rustIdentifier     Tag
 " Variation: I actually like making these Special too
 hi! link rustLifetime       Keyword
 hi! link rustMacro          SublimeFunctionCall
-hi! link rustModPathSep     Normal
+hi! link rustModPathSep     SublimeWhite
 hi! link rustQuestionMark   Keyword
 hi! link rustRepeat         Keyword
 hi! link rustSelf           SublimeContextParam
@@ -1010,11 +1018,11 @@ hi! link scalaInstanceDeclaration    Tag
 " highlights the quotes themselves.
 hi! link scalaInterpolationBrackets  SublimeAqua
 hi! link scalaKeywordModifier        Keyword
-" Variation: I actually prefer these to be `Normal`.
+" Variation: I actually prefer these to be `SublimeWhite`.
 hi! link scalaNameDefinition         Tag
 " TODO: Is this too inclusive?
 hi! link scalaSpecial                Keyword
-hi! link scalaSquareBracketsBrackets Normal
+hi! link scalaSquareBracketsBrackets SublimeWhite
 " Variation: This isn't perfect, because it encompasses brackets right now.
 hi! link scalaTypeDeclaration        SublimeType
 " XXX: Other known deficiencies:
@@ -1058,19 +1066,19 @@ hi! link TagbarVisibilityPublic    SublimeGreen
 " TypeScript
 
 " Why is this `Keyword` by default? Who knows?
-hi! link typescriptEndColons              Normal
+hi! link typescriptEndColons              SublimeWhite
 " XXX: This is too inclusive -- I expected this to just be the types, but it
 " includes the `throw` keyword too.
 hi! link typescriptExceptions             SublimeType
 hi! link typescriptFuncKeyword            SublimeType
 hi! link typescriptIdentifier             SublimeContextParam
-" Variation: I far prefer to let this be `Normal`...
+" Variation: I far prefer to let this be `SublimeWhite`...
 hi! link typescriptInterpolation          String
 " ...and have this be `Special`.
 hi! link typescriptInterpolationDelimiter String
 hi! link typescriptLogicSymbols           Keyword
 " Why is this `Keyword` by default? Who knows?
-hi! link typescriptParens                 Normal
+hi! link typescriptParens                 SublimeWhite
 " Variation: I prefer to make this `Special.`, since I use the value way more
 " than `null` as a type. Sublime distinguishes, it'd be nice if we could too.
 hi! link typescriptNull                   Special
@@ -1117,18 +1125,18 @@ hi! link xmlAttrib          Tag
 " XXX: This highlight the brackets and end slash too...which we don't want.
 hi! link xmlEndTag          Keyword
 " Variation: I actually liked it when this was faded.
-hi! link xmlProcessingDelim Normal
+hi! link xmlProcessingDelim SublimeWhite
 hi! link xmlTagName         Keyword
 
 " YAML
 
-hi! link yamlBlockCollectionItemStart Normal
+hi! link yamlBlockCollectionItemStart SublimeWhite
 hi! link yamlBlockMappingKey          Keyword
 hi! link yamlEscape                   Special
 " Variation: I kind of like keeping these Special
-hi! link yamlFlowIndicator            Normal
+hi! link yamlFlowIndicator            SublimeWhite
 hi! link yamlFlowMappingKey           Keyword
-hi! link yamlKeyValueDelimiter        Normal
+hi! link yamlKeyValueDelimiter        SublimeWhite
 hi! link yamlPlainScalar              String
 " XXX: Other known deficiencies:
 "
@@ -1149,12 +1157,12 @@ hi! link yamlPlainScalar              String
 " zsh
 
 " Variation: I actually like making these aqua.
-hi! link zshDeref    Normal
+hi! link zshDeref    SublimeWhite
 hi! link zshFunction Tag
 " XXX: This isn't awesome because it includes too much, like semicolons. :(
 hi! link zshOperator Operator
 " Variation: This actually looks nicer as a Special.
-hi! link zshOption   Normal
+hi! link zshOption   SublimeWhite
 hi! link zshQuoted   Special
 " Variation: I'd probably prefer this to be something else, actually.
 " XXX: This doesn't work particularly well here...but most of the time, we're
