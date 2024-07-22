@@ -845,6 +845,13 @@ hi! link NERDTreeGitStatusModified SublimeOrange
 hi! link NERDTreeGitStatusRenamed SublimeOrange
 hi! link NERDTreeGitStatusUntracked SublimeGreen
 
+" Nushell
+
+hi! link nuClosure SublimeContextParam
+hi! link nuString SublimeYellow
+hi! link nuType SublimeType
+hi! link nuVar SublimeAqua
+
 " PHP
 
 " Variation: It's actually a cool idea to style these to assist reading.
