@@ -909,6 +909,7 @@ hi! link pythonConditional        Conditional
 hi! link pythonException          Keyword
 hi! link pythonExClass            SublimeType
 hi! link pythonFunction           Tag
+hi! link pythonFunctionCall       SublimeFunctionCall
 hi! link pythonImport             Keyword
 hi! link pythonInclude            Keyword
 hi! link pythonLambdaExpr         SublimeType
