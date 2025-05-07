@@ -985,6 +985,7 @@ hi! link rustModPathSep     SublimeWhite
 hi! link rustQuestionMark   Keyword
 hi! link rustRepeat         Keyword
 hi! link rustSelf           SublimeContextParam
+hi! link rustType           SublimeType
 " XXX: Other known deficiencies:
 "
 " * In Sublime, `fn` and `let` keywords are highlighted with italicized aqua,
