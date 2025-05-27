@@ -72,6 +72,14 @@ to your `.vimrc`:
 let g:sublimemonokai_term_italic = 1
 ```
 
+### Transparent background
+
+To use a transparent background, add the following to your `.vimrc`:
+
+```viml
+let g:sublimemonokai_transparent_bg = 1
+```
+
 ## Language-specific configuration
 
 In order to provide an experience with parity to Sublime, this color scheme
