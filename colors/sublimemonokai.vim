@@ -21,6 +21,10 @@ if !exists('g:sublimemonokai_term_italic')
 	let g:sublimemonokai_term_italic = 0
 endif
 
+if !exists('g:sublimemonokai_transparent_bg')
+	let g:sublimemonokai_transparent_bg = 0
+endif
+
 let g:sublimemonokai_termcolors = 256 " does not support 16 color term right now.
 
 set background=dark
@@ -100,6 +104,7 @@ call s:create_palette_color('orange',      { 'gui': '#fd9720', 'cterm': '208' })
 call s:create_palette_color('purple',      { 'gui': '#ae81ff', 'cterm': '141' })
 call s:create_palette_color('red',         { 'gui': '#e73c50', 'cterm': '196' })
 call s:create_palette_color('darkred',     { 'gui': '#5f0000', 'cterm': '52'  })
+call s:create_palette_color('none',        { 'gui': 'NONE',    'cterm': 'NONE'})
 
 call s:create_palette_color('addfg',       { 'gui': '#d7ffaf', 'cterm': '193' })
 call s:create_palette_color('addbg',       { 'gui': '#5f875f', 'cterm': '65'  })
@@ -153,7 +158,7 @@ call s:h('MatchParen',   {                                        'format': 'und
 hi! link ModeMsg SublimeYellow
 hi! link MoreMsg SublimeYellow
 hi! link NonText SublimeLightGrey
-call s:h('Normal',       { 'fg': s:white,       'bg': s:black                                  })
+call s:h('Normal',       { 'fg': s:white,       'bg': g:sublimemonokai_transparent_bg  ? s:none : s:black})
 if has('nvim')
 	call s:h('NormalFloat',{ 'fg': s:white,       'bg': s:warmgrey                               })
 end
